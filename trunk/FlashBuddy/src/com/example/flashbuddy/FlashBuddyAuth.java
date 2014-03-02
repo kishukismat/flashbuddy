@@ -25,6 +25,14 @@ public class FlashBuddyAuth {
 	private static String TAG="FlashBuddy::FlashBuddyAuth";
 	
 	/**
+	 * FlashBuddyAuth Constructor
+	 */
+	public FlashBuddyAuth(){
+		this.username="";
+		this.password="";
+	}
+	
+	/**
 	 * Authenticate: public method that authenticates a user to FlashBuddy
 	 * @param username
 	 * @param password
