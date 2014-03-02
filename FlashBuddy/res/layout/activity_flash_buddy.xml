@@ -39,21 +39,22 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:layout_centerHorizontal="true"
-        android:text="@string/log_in" 
-        android:onClick="onClickAuthUser" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/password_text"
         android:layout_centerHorizontal="true"
-        android:text="@string/create_new_account" 
-        android:onClick="onClickCreateUser" />
+        android:layout_marginTop="41dp"
+        android:onClick="onClickCreateUser"
+        android:text="@string/create_new_account" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_text"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickAuthUser"
+        android:text="@string/log_in" />
 
 </RelativeLayout>
