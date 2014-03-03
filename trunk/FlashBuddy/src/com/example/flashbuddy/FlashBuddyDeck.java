@@ -80,4 +80,21 @@ public class FlashBuddyDeck {
 	public int getNumCards(){
 		return this.numCards;
 	}
+	
+	/**
+	 * readDeck : attempts to read a deck from the target filename 
+	 * @param fileName is the fileName of the target xml file to read
+	 * @return returns true on success, false otherwise
+	 */
+	public Boolean readDeck( String fileName ){
+		return true;
+	}
+	
+	/**
+	 * writeDeck : attempts to write a deck out to a file
+	 * @return returns true on success, false otherwise
+	 */
+	public Boolean writeDeck(){
+		return true;
+	}
 }
