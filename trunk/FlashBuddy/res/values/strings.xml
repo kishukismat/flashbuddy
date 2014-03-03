@@ -18,5 +18,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_flash_buddy_user">FlashBuddy</string>
     <string name="title_activity_flash_buddy_create_user">FlashBuddyCreateUserActivity</string>
+    <string name="main_start_studying">Start Studying!</string>
+    <string name="main_view_decks">View Decks</string>
+    <string name="main_help">Help</string>
+    <string name="main_logout">Logout</string>
+    <string name="main_currentusername">"Currently logged in as: "</string>
+    <string name="main_trueUsername"></string>
 
 </resources>

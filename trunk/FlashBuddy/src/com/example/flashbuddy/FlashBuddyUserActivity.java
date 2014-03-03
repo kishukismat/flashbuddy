@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -28,28 +29,21 @@ public class FlashBuddyUserActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_user);
+		
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
-		/* 
-		 * Create a new intent 
-		 */
-		Intent intent = getIntent();
-		
-		/* 
-		 * Receive the message from the parent
-		 */
+		// Create a new intent 
+		Intent intent = getIntent();	
+
+		// Receive the message from the parent
 		String message = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
-		String fullMessage = "Welcome " + message + "!";
+		 
+		// Attach the textview to an existing one in the layout
+		TextView textView = (TextView) findViewById(R.id.usernameTextview);
 		
-		/* 
-		 * create the text view
-		 */
-		TextView textView = new TextView(this);
-		
-		textView.setTextSize( 32 );
-		textView.setText( fullMessage );
-		setContentView(textView);
+		//textView.setTextSize( 32 );
+		textView.setText( message );
 		
 	}
 
@@ -86,5 +80,13 @@ public class FlashBuddyUserActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+    /**
+     * Handles the Logout button click
+     */
+    public void onClickLogout(View view) {
+    	Intent logoutIntent = new Intent( this, FlashBuddy.class );
+    	startActivity(logoutIntent);
+    }
 
 }
