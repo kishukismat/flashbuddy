@@ -1,5 +1,7 @@
 package com.example.flashbuddy;
 
+import java.io.File;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -16,6 +18,13 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		setContentView(R.layout.activity_flash_buddy_modify_decks);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		/*
+		 * list the files in our directory 
+		 */
+		String[] files = getFilesDir().list();
+		
+		
 	}
 
 	/**
