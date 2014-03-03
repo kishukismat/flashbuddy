@@ -12,11 +12,15 @@
 
 package com.example.flashbuddy;
 
+
+
 public class FlashBuddyDeck {
 	
 	private String title;
 	private String subject;
 	private int numCards;
+	//private FlashBuddyCard[] cards; /* static array ?? */
+	//private List<FlashBuddyCard> cards; /* lists.. must import java.util */
 	
 	/**
 	 * FlashBuddyDeck Constructor
@@ -24,6 +28,17 @@ public class FlashBuddyDeck {
 	public FlashBuddyDeck(){
 		this.title = "";
 		this.subject = "";
+		this.numCards = 0;
+	}
+	
+	/**
+	 * FlashBuddyDeck Constructor Overloaded to build new decks
+	 * @param title title is a String representing a new title
+	 * @param subject subject is a String representing a new subject
+	 */
+	public FlashBuddyDeck( String title, String subject ){
+		this.title = title;
+		this.subject = subject;
 		this.numCards = 0;
 	}
 	
@@ -95,6 +110,45 @@ public class FlashBuddyDeck {
 	 * @return returns true on success, false otherwise
 	 */
 	public Boolean writeDeck(){
+		return true;
+	}
+	
+	/**
+	 * addCard : creates a new card in the current deck
+	 * @param id id is an integer for the new id
+	 * @param timer timer is the new card's timer value in seconds
+	 * @param name name is the name of the new card
+	 * @param question question is the question for the new card
+	 * @param answer answer is the answer for the new card
+	 * @return returns true on success, false otherwise
+	 */
+	public Boolean addCard( int id,
+						int timer, 
+						String name, 
+						String question, 
+						String answer ){
+		
+		/* TODO : CREATE A NEW CARD INSTANCE AND POPULATE ITS VALUES */
+		
+		this.numCards++;
+		
+		return true;
+	}
+	
+	/**
+	 * deleteCard : deletes a card at the target ID
+	 * @param id id is an integer representing the card to delete
+	 * @return returns true on successful deletion, false otherwise
+	 */
+	public Boolean deleteCard( int id ){
+		
+		/* TODO : REMOVE THE TARGET CARD AT 'id' */
+		
+		/* step 1 : walk the deck and look for 'id' */
+		/* step 2 : remove the card */
+		
+		this.numCards--;
+		
 		return true;
 	}
 }
