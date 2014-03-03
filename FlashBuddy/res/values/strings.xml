@@ -6,6 +6,9 @@
     <string name="log_in_banner">Log In to Access FlashBuddy</string>
     <string name="username">user@email</string>
     <string name="password">password</string>
+    <string name="createuser_text">Create A FlashBuddy Account</string>
+    <string name="create_password_1">enter a password</string>
+    <string name="create_password_2">enter it again</string>
     <string name="log_in">Log In</string>
     <string name="create_new_account">Create New Account</string>
     <string name="view_flash_decks">View Flash Decks</string>
@@ -14,5 +17,6 @@
     <string name="title_activity_flash_buddy_displayed_message">FlashBuddy Message</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_flash_buddy_user">FlashBuddy</string>
+    <string name="title_activity_flash_buddy_create_user">FlashBuddyCreateUserActivity</string>
 
 </resources>
