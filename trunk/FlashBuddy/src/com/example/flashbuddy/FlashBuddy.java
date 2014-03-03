@@ -81,7 +81,7 @@ public class FlashBuddy extends Activity {
      * @param view the current application view
      */
     public void onClickCreateUser(View view) {
-    	Intent failedIntent = new Intent( this, FlashBuddyCreateUserActivity.class );
-    	startActivity(failedIntent);
+    	Intent createUserIntent = new Intent( this, FlashBuddyCreateUserActivity.class );
+    	startActivity(createUserIntent);
     }
 }
