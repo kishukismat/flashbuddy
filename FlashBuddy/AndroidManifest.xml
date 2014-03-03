@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyDisplayedMessageActivity"
+            android:label="@string/title_activity_flash_buddy_displayed_message"
+            android:parentActivityName="com.example.flashbuddy.FlashBuddy" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.flashbuddy.FlashBuddy" />
+        </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyUserActivity"
+            android:label="@string/title_activity_flash_buddy_user"
+            android:parentActivityName="com.example.flashbuddy.FlashBuddy" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.flashbuddy.FlashBuddy" />
+        </activity>
     </application>
 
 </manifest>
