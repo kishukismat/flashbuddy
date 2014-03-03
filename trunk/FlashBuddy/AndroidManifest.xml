@@ -46,6 +46,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.flashbuddy.FlashBuddy" />
         </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyModifyDecksActivity"
+            android:label="@string/title_activity_flash_buddy_modify_decks"
+            android:parentActivityName="com.example.flashbuddy.FlashBuddy" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.flashbuddy.FlashBuddy" />
+        </activity>
     </application>
 
 </manifest>
