@@ -1,0 +1,5 @@
+package org.owasp.esapi.reference.validation;
+
+public class TheAssign2 {
+
+}

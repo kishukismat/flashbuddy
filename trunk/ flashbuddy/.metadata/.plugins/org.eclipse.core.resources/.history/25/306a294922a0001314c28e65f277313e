@@ -1,0 +1,23 @@
+package org.owasp.esapi.reference.validation;
+
+import java.util.*;
+
+import org.owasp.esapi.reference.DefaultEncoder;
+//import org.owasp.esapi.reference.validation.*;
+
+public class Assign2 {
+
+	public Assign2 (){
+	}
+
+	public static void main(String[] args) {
+		
+		Assign2 obj = new Assign2();
+		CreditCardValidationRule ccVal = new CreditCardValidationRule("Zack",DefaultEncoder.getInstance() );
+		
+		
+		ccVal.getMaxCardLength();
+		
+		
+	}
+}

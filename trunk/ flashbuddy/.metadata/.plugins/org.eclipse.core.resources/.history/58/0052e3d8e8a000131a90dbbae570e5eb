@@ -1,0 +1,118 @@
+import java.text.DateFormat;
+import java.util.*;
+import java.util.regex.Pattern;
+
+import org.owasp.esapi.reference.DefaultEncoder;
+import org.owasp.esapi.reference.validation.*;
+
+public class TheAssign2 {
+
+
+	public static void main(String[] args) {
+		
+		CreditCardValidationRule ccVal = new CreditCardValidationRule("Zack", DefaultEncoder.getInstance());		
+		StringValidationRule stringRule = new StringValidationRule("String Rule");
+		
+		ccVal.getMaxCardLength();
+		
+		ccVal.getStringValidatorRule();
+		
+		try{
+			ccVal.getValid("Context", "Input");
+		} catch(Exception e){
+			System.out.println("The number is not valid.");
+		}
+		
+		ccVal.sanitize("Context", "Input");
+		
+		ccVal.setMaxCardLength(14);
+		
+		ccVal.setStringValidatorRule(stringRule);
+		
+		//ccVal.validCreditCardFormat("123456789");
+		//End of the Credit Card Validation method calls.
+		
+		DateFormat df = DateFormat.getDateInstance();
+		
+		DateValidationRule dateRule = new DateValidationRule("DateRule", DefaultEncoder.getInstance(), df);
+		
+		try{
+		dateRule.getValid("Context", "Input");
+		} catch (Exception e) {
+			System.out.println("Date Validation Failed");
+		}
+		
+		dateRule.sanitize("Context", "Input");
+		
+		dateRule.setDateFormat(DateFormat.getDateInstance());
+		
+		//End Date Validation class method calls
+		
+		HTMLValidationRule htmlRule = new HTMLValidationRule("HTML Rule");
+		
+		try{
+		htmlRule.getValid("Context", "Input");
+		}catch (Exception e) {
+			System.out.println("HTML is not valid");
+		}
+		
+		htmlRule.sanitize("Context", "Input");
+		
+		//End HTML Validation class method calls.
+		
+		IntegerValidationRule intRule = new IntegerValidationRule("The Int Rule", DefaultEncoder.getInstance(), 0, 500);
+		
+		try{
+		intRule.getValid("Context", "Input");
+		}catch (Exception e){
+			System.out.println("The int is not valid");
+		}
+		
+		intRule.sanitize("Context", "Input");
+		
+		//End of Integer Validation Rule class method calls.
+		
+		NumberValidationRule numRule = new NumberValidationRule("Number Rule", DefaultEncoder.getInstance(), 0.0, 500.0);
+		
+		try{
+			numRule.getValid("Context", "Input");
+		}catch (Exception e){
+			System.out.println("The number is not valid.");
+		}
+		
+		numRule.sanitize("Context", "Input");
+		
+		//End of the Number Validation Rule class method calls.
+				
+		java.util.regex.Pattern blacklist = Pattern.compile("ABC");
+		java.util.regex.Pattern whitelist = Pattern.compile("123");
+		
+		stringRule.addBlacklistPattern(blacklist);
+		
+		stringRule.addBlacklistPattern("the blacklist");
+		
+		stringRule.addWhitelistPattern(whitelist);
+		
+		stringRule.addWhitelistPattern("the whitelist");
+		
+		try{
+		String valString = stringRule.getValid("Context", "Input");
+		
+		System.out.println(valString);
+		}catch (Exception e){
+			System.out.println("The string is not valid.");
+		}
+		
+		stringRule.sanitize("Context", "Input");
+		
+		stringRule.setMaximumLength(35);
+		
+		stringRule.setMinimumLength(3);
+		
+		stringRule.setValidateInputAndCanonical(false);
+		
+		//End of String Validation Rule class method calls.
+		
+	}
+}
+
