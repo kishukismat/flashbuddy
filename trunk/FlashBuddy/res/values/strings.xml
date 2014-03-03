@@ -3,13 +3,16 @@
 
     <string name="app_name">FlashBuddy</string>
     <string name="action_settings">Settings</string>
-	<string name="log_in_banner">Log In to Access FlashBuddy</string>
+    <string name="log_in_banner">Log In to Access FlashBuddy</string>
     <string name="username">user@email</string>
     <string name="password">password</string>
     <string name="log_in">Log In</string>
     <string name="create_new_account">Create New Account</string>
     <string name="view_flash_decks">View Flash Decks</string>
-	<string name="create_flash_decks">Create Flash Decks</string>
-	<string name="share_flash_decks">Share Flash Decks</string>
-    
+    <string name="create_flash_decks">Create Flash Decks</string>
+    <string name="share_flash_decks">Share Flash Decks</string>
+    <string name="title_activity_flash_buddy_displayed_message">FlashBuddy Message</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_flash_buddy_user">FlashBuddy</string>
+
 </resources>
