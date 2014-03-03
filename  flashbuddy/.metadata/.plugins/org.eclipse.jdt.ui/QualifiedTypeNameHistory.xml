@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.xml.bind.ValidationException"/>
+<fullyQualifiedTypeName name="org.owasp.esapi.reference.DefaultEncoder"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+</qualifiedTypeNameHistroy>
