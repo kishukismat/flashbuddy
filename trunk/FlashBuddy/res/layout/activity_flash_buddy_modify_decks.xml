@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/DeleteDeck"
         android:layout_centerHorizontal="true"
+        android:onClick="onClickNewDeck"
         android:text="@string/create_deck_button" />
 
     <ExpandableListView
