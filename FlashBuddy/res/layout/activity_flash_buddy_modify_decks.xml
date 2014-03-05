@@ -32,4 +32,15 @@
         android:layout_centerHorizontal="true"
         android:text="@string/create_deck_button" />
 
+    <ExpandableListView
+        android:id="@+id/ModifyFileList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/EditDeck"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:layout_gravity="center">
+    </ExpandableListView>
+    
 </RelativeLayout>
