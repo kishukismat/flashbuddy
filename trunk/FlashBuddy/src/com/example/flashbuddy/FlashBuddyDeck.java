@@ -12,6 +12,8 @@
 
 package com.example.flashbuddy;
 
+import java.util.List;
+
 
 
 public class FlashBuddyDeck {
@@ -20,7 +22,7 @@ public class FlashBuddyDeck {
 	private String subject;
 	private int numCards;
 	//private FlashBuddyCard[] cards; /* static array ?? */
-	//private List<FlashBuddyCard> cards; /* lists.. must import java.util */
+	private List<FlashBuddyCard> cards; /* lists.. must import java.util */
 	
 	/**
 	 * FlashBuddyDeck Constructor
@@ -29,6 +31,7 @@ public class FlashBuddyDeck {
 		this.title = "";
 		this.subject = "";
 		this.numCards = 0;
+		this.cards = null;
 	}
 	
 	/**
@@ -40,6 +43,7 @@ public class FlashBuddyDeck {
 		this.title = title;
 		this.subject = subject;
 		this.numCards = 0;
+		this.cards = null;
 	}
 	
 	/**
@@ -128,8 +132,8 @@ public class FlashBuddyDeck {
 						String question, 
 						String answer ){
 		
-		/* TODO : CREATE A NEW CARD INSTANCE AND POPULATE ITS VALUES */
-		
+		FlashBuddyCard card = new FlashBuddyCard (id, timer, name, question, answer);
+		cards.add(card);
 		this.numCards++;
 		
 		return true;
@@ -140,12 +144,21 @@ public class FlashBuddyDeck {
 	 * @param id id is an integer representing the card to delete
 	 * @return returns true on successful deletion, false otherwise
 	 */
-	public Boolean deleteCard( int id ){
+	public Boolean deleteCard( int id, List<FlashBuddyDeck> theDeck, FlashBuddyCard theCard ){
 		
 		/* TODO : REMOVE THE TARGET CARD AT 'id' */
 		
 		/* step 1 : walk the deck and look for 'id' */
 		/* step 2 : remove the card */
+		
+		int theId = theCard.getId();
+		
+		while(theDeck.iterator().hasNext())
+		{
+			if(theDeck.iterator().next().equals(theId))
+				
+				theDeck.remove(theDeck.indexOf(theCard));
+		}
 		
 		this.numCards--;
 		
