@@ -7,6 +7,11 @@
     <string name="username">user@email</string>
     <string name="password">password</string>
     <string name="createuser_text">Create A FlashBuddy Account</string>
+    <string name="createdeck_text">Create A FlashBuddy Deck</string>
+    <string name="deckname">Insert Deck Name</string>
+    <string name="decksubject">Insert Deck Subject</string>
+    <string name="create_deck">Create Deck</string>
+    <string name="numcards">Num Cards</string>
     <string name="create_password_1">enter a password</string>
     <string name="create_password_2">enter it again</string>
     <string name="log_in">Log In</string>
@@ -36,5 +41,6 @@
     <color name="transparent">#80000000</color>
 
     <string name="title_activity_xmlparse">XMLParseActivity</string>
+    <string name="title_activity_flash_buddy_create_deck">FlashBuddyCreateDeckActivity</string>
 
 </resources>
