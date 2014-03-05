@@ -1,3 +1,15 @@
+/**
+ * FlashBuddy XML Parser Class
+ * 
+ * FlashBuddy XML Parser Class 
+ * 
+ * @author John Leidel
+ * @author Zack Falgout
+ * @author Chase Baker 
+ * @version 1.0
+ * 
+ */
+
 package com.example.flashbuddy;
 
 import java.io.IOException;
