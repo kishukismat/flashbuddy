@@ -128,8 +128,8 @@ public class FlashBuddyDeck {
 						String question, 
 						String answer ){
 		
-		/* TODO : CREATE A NEW CARD INSTANCE AND POPULATE ITS VALUES */
-		
+		FlashBuddyCard card = new FlashBuddyCard (id, timer, name, question, answer);
+		cards.add(card);
 		this.numCards++;
 		
 		return true;
@@ -140,12 +140,16 @@ public class FlashBuddyDeck {
 	 * @param id id is an integer representing the card to delete
 	 * @return returns true on successful deletion, false otherwise
 	 */
-	public Boolean deleteCard( int id ){
+	public Boolean deleteCard( int id, List<FlashBuddyDeck> theDeck, FlashBuddyCard theCard ){
 		
-		/* TODO : REMOVE THE TARGET CARD AT 'id' */
+		int theId = theCard.getId();
 		
-		/* step 1 : walk the deck and look for 'id' */
-		/* step 2 : remove the card */
+		while(theDeck.iterator().hasNext())
+		{
+			if(theDeck.iterator().next().equals(theId))
+				
+				theDeck.remove(theDeck.indexOf(theCard));
+		}
 		
 		this.numCards--;
 		
