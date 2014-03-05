@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 
 public class FlashBuddyModifyDecksActivity extends Activity {
@@ -147,6 +148,11 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		gru1.setItems( list2 );
 		list.add(gru1);
 		return list;
+	}
+	
+	public void onClickNewDeck( View view ){
+		Intent createDecksIntent = new Intent( this, FlashBuddyCreateDeckActivity.class );
+		startActivity( createDecksIntent );
 	}
 
 }
