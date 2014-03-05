@@ -12,7 +12,16 @@
 
 package com.example.flashbuddy;
 
+import android.content.Context;
+
+import com.example.flashbuddy.XMLParse;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.List;
+
 
 
 
@@ -23,6 +32,7 @@ public class FlashBuddyDeck {
 	private int numCards;
 	//private FlashBuddyCard[] cards; /* static array ?? */
 	private List<FlashBuddyCard> cards; /* lists.. must import java.util */
+
 	
 	/**
 	 * FlashBuddyDeck Constructor
@@ -106,6 +116,18 @@ public class FlashBuddyDeck {
 	 * @return returns true on success, false otherwise
 	 */
 	public Boolean readDeck( String fileName ){
+		
+		XMLParse parser = new XMLParse();
+		InputStream inputStream;
+		
+		try{
+			inputStream = new FileInputStream(fileName);
+			this.cards = parser.parse(inputStream);
+			inputStream.close();
+		}catch (Exception e ){
+			e.printStackTrace();
+		}
+		
 		return true;
 	}
 	
@@ -114,6 +136,7 @@ public class FlashBuddyDeck {
 	 * @return returns true on success, false otherwise
 	 */
 	public Boolean writeDeck(){
+		
 		return true;
 	}
 	
