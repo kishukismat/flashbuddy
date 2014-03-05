@@ -60,8 +60,9 @@ public final class R {
         public static final int activity_flash_buddy_displayed_message=0x7f030002;
         public static final int activity_flash_buddy_modify_decks=0x7f030003;
         public static final int activity_flash_buddy_user=0x7f030004;
-        public static final int expandlist_child_item=0x7f030005;
-        public static final int expandlist_group_item=0x7f030006;
+        public static final int activity_xmlparse=0x7f030005;
+        public static final int expandlist_child_item=0x7f030006;
+        public static final int expandlist_group_item=0x7f030007;
     }
     public static final class menu {
         public static final int flash_buddy=0x7f080000;
@@ -69,6 +70,7 @@ public final class R {
         public static final int flash_buddy_displayed_message=0x7f080002;
         public static final int flash_buddy_modify_decks=0x7f080003;
         public static final int flash_buddy_user=0x7f080004;
+        public static final int xmlparse=0x7f080005;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -96,6 +98,7 @@ public final class R {
         public static final int title_activity_flash_buddy_displayed_message=0x7f05000d;
         public static final int title_activity_flash_buddy_modify_decks=0x7f05001a;
         public static final int title_activity_flash_buddy_user=0x7f05000f;
+        public static final int title_activity_xmlparse=0x7f05001b;
         public static final int username=0x7f050003;
         public static final int view_flash_decks=0x7f05000a;
     }
