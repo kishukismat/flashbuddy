@@ -29,4 +29,10 @@
     <string name="delete_deck_button">Delete Deck</string>
     <string name="title_activity_flash_buddy_modify_decks">FlashBuddyModifyDecksActivity</string>
 
+    <color name="Black">#000000</color>
+    <color name="ExpandChildBackground">#FFAFABAB</color>
+    <color name="ExpandGroupBackground">#FF7C7C7C</color>
+    <color name="highlighted_entry">#7A1839</color>
+    <color name="transparent">#80000000</color>
+    
 </resources>
