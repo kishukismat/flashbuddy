@@ -34,5 +34,7 @@
     <color name="ExpandGroupBackground">#FF7C7C7C</color>
     <color name="highlighted_entry">#7A1839</color>
     <color name="transparent">#80000000</color>
-    
+
+    <string name="title_activity_xmlparse">XMLParseActivity</string>
+
 </resources>
