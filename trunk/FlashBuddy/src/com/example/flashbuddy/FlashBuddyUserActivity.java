@@ -12,8 +12,14 @@
 
 package com.example.flashbuddy;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,10 +31,29 @@ import android.os.Build;
 
 public class FlashBuddyUserActivity extends Activity {
 
+	private static final String TAG="FlashBuddyUserActivityUnpackAssets";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_user);
+		
+		/* 
+		 * unpack the asset files
+		 */
+		Log.i(TAG,"UNPACKING ASSETS");
+		try {
+			String []foo = getAssets().list("");
+			for( String s : foo ){
+				Log.i(TAG,"ASSET_FILE: "+s);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		unpackAssets("Grade_One_Addition.xml");
+		unpackAssets("Grade_One_Subtraction.xml");
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
@@ -44,7 +69,7 @@ public class FlashBuddyUserActivity extends Activity {
 		
 		//textView.setTextSize( 32 );
 		textView.setText( message );
-		
+
 	}
 
 	/**
@@ -98,5 +123,32 @@ public class FlashBuddyUserActivity extends Activity {
     	startActivity( showDecksIntent );
     	
     }
+    
+    public void onClickStudy( View view ){
+    	Intent showStudyIntent = new Intent( this, FlashBuddyStudyDecksActivity.class);
+    	startActivity( showStudyIntent);
+    }
 
+    /**
+     * unpackAssets
+     * @param S
+     */
+    public void unpackAssets( String S ){
+    	File f = new File(getFilesDir()+S);
+    	Log.i(TAG, "Unpacking: "+S);
+    	if (!f.exists()) try {
+    		
+    	    InputStream is = getAssets().open(S);
+    	    int size = is.available();
+    	    byte[] buffer = new byte[size];
+    	    is.read(buffer);
+    	    is.close();
+
+
+    	    FileOutputStream fos = new FileOutputStream(f);
+    	    fos.write(buffer);
+    	    fos.close();
+    	  } catch (Exception e) { throw new RuntimeException(e); }
+    }
+    
 }
