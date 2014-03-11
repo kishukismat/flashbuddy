@@ -36,13 +36,15 @@ public final class R {
         public static final int CreateUserBanner=0x7f09000d;
         public static final int DeleteDeck=0x7f090010;
         public static final int EditDeck=0x7f09000f;
-        public static final int Help=0x7f090015;
+        public static final int Help=0x7f090017;
         public static final int LogInBanner=0x7f090002;
-        public static final int Logout=0x7f090016;
+        public static final int Logout=0x7f090018;
         public static final int ModifyFileList=0x7f090012;
-        public static final int StartStudying=0x7f090014;
-        public static final int ViewDecks=0x7f090013;
-        public static final int action_settings=0x7f09001b;
+        public static final int StartStudying=0x7f090016;
+        public static final int StudyDeck=0x7f090014;
+        public static final int StudyFileList=0x7f090013;
+        public static final int ViewDecks=0x7f090015;
+        public static final int action_settings=0x7f09001d;
         public static final int button1=0x7f090003;
         public static final int button2=0x7f090004;
         public static final int create_deck_button=0x7f090009;
@@ -53,11 +55,11 @@ public final class R {
         public static final int create_password_text_2=0x7f09000c;
         public static final int create_user_button=0x7f09000e;
         public static final int create_username_text=0x7f09000b;
-        public static final int current_user=0x7f090017;
+        public static final int current_user=0x7f090019;
         public static final int password_text=0x7f090001;
-        public static final int tvChild=0x7f090019;
-        public static final int tvGroup=0x7f09001a;
-        public static final int usernameTextview=0x7f090018;
+        public static final int tvChild=0x7f09001b;
+        public static final int tvGroup=0x7f09001c;
+        public static final int usernameTextview=0x7f09001a;
         public static final int username_text=0x7f090000;
     }
     public static final class layout {
@@ -66,10 +68,11 @@ public final class R {
         public static final int activity_flash_buddy_create_user=0x7f030002;
         public static final int activity_flash_buddy_displayed_message=0x7f030003;
         public static final int activity_flash_buddy_modify_decks=0x7f030004;
-        public static final int activity_flash_buddy_user=0x7f030005;
-        public static final int activity_xmlparse=0x7f030006;
-        public static final int expandlist_child_item=0x7f030007;
-        public static final int expandlist_group_item=0x7f030008;
+        public static final int activity_flash_buddy_study_decks=0x7f030005;
+        public static final int activity_flash_buddy_user=0x7f030006;
+        public static final int activity_xmlparse=0x7f030007;
+        public static final int expandlist_child_item=0x7f030008;
+        public static final int expandlist_group_item=0x7f030009;
     }
     public static final class menu {
         public static final int flash_buddy=0x7f080000;
@@ -77,7 +80,8 @@ public final class R {
         public static final int flash_buddy_create_user=0x7f080002;
         public static final int flash_buddy_displayed_message=0x7f080003;
         public static final int flash_buddy_modify_decks=0x7f080004;
-        public static final int flash_buddy_user=0x7f080005;
+        public static final int flash_buddy_study_decks=0x7f080005;
+        public static final int flash_buddy_user=0x7f080006;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -106,6 +110,7 @@ public final class R {
         public static final int numcards=0x7f05000a;
         public static final int password=0x7f050004;
         public static final int share_flash_decks=0x7f050011;
+        public static final int study_deck_button=0x7f050022;
         public static final int title_activity_flash_buddy_create_deck=0x7f050021;
         public static final int title_activity_flash_buddy_create_user=0x7f050015;
         public static final int title_activity_flash_buddy_displayed_message=0x7f050012;
