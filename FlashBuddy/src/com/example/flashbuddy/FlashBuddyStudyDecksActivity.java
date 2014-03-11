@@ -47,20 +47,13 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		 * list the files in our directory 
 		 */
 		String[] files = getFilesDir().list();
-		String[] files2 = null;
-		try {
-			files2 = getAssets().list("");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		
 		/* 
 		 * setup the menu
 		 */
 		ExpandList = (ExpandableListView)findViewById(R.id.StudyFileList);
-		ExpListItems = SetStandardGroups(files, files2 );
+		ExpListItems = SetStandardGroups(files);
 		ExpAdapter = new ExpandListAdapter(FlashBuddyStudyDecksActivity.this,ExpListItems);
 		ExpandList.setAdapter(ExpAdapter);
 		ExpandList.setChoiceMode(ExpandableListView.CHOICE_MODE_SINGLE);
@@ -92,12 +85,13 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		return true;
 	}
 	
+	
 	/**
 	 * SetStandardGroup : setup the standard list items
 	 * @param files files is an array of file names
 	 * @return returns the array list items
 	 */
-	public ArrayList<ExpandListGroup> SetStandardGroups( String[] files, String[] files2){
+	public ArrayList<ExpandListGroup> SetStandardGroups( String[] files){
 		ArrayList<ExpandListGroup> list = new ArrayList<ExpandListGroup>();
 		ArrayList<ExpandListChild> list2 = new ArrayList<ExpandListChild>(); 
 		
@@ -117,15 +111,6 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		}else{
 			for( String s : files ){
 				ch1.setName(s);
-				ch1.setTag(null);
-				ch1.setSelected(false);
-				list2.add(ch1);
-			}
-		}
-		
-		if( files2.length>0 ){
-			for( String s2 : files2 ){
-				ch1.setName(s2);
 				ch1.setTag(null);
 				ch1.setSelected(false);
 				list2.add(ch1);

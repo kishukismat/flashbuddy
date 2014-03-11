@@ -23,6 +23,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_flash_buddy_user">FlashBuddy</string>
     <string name="title_activity_flash_buddy_create_user">FlashBuddyCreateUserActivity</string>
+    <string name="title_activity_flash_buddy_study_decks">FlashBuddy Study Decks</string>
     <string name="main_start_studying">Start Studying!</string>
     <string name="main_view_decks">Decks</string>
     <string name="main_help">Help</string>

@@ -58,6 +58,14 @@
             android:name="com.example.flashbuddy.XMLParseActivity"
             android:label="@string/title_activity_xmlparse" >
         </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyCreateDeckActivity"
+            android:label="@string/title_activity_flash_buddy_create_deck" >
+        </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyStudyDecksActivity"
+            android:label="@string/title_activity_flash_buddy_study_decks" >
+        </activity>
     </application>
 
 </manifest>
