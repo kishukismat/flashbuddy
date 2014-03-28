@@ -46,7 +46,12 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		/*
 		 * list the files in our directory 
 		 */
-		String[] files = getFilesDir().list();
+		String[] files = null;
+		try {
+			files = this.getAssets().list("decks");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		/* 
@@ -102,14 +107,15 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		/* 
 		 * Add the children
 		 */
-		ExpandListChild ch1 = new ExpandListChild();
 		if( files.length == 0 ){
+			ExpandListChild ch1 = new ExpandListChild();
 			ch1.setName("NO DECKS FOUND");
 			ch1.setTag(null);
 			ch1.setSelected(false);
 			list2.add(ch1);
 		}else{
 			for( String s : files ){
+				ExpandListChild ch1 = new ExpandListChild();
 				ch1.setName(s);
 				ch1.setTag(null);
 				ch1.setSelected(false);
