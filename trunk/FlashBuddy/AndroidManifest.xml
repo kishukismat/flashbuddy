@@ -66,6 +66,10 @@
             android:name="com.example.flashbuddy.FlashBuddyStudyDecksActivity"
             android:label="@string/title_activity_flash_buddy_study_decks" >
         </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyExecStudyDeck"
+            android:label="@string/title_activity_flash_buddy_exec_study_deck" >
+        </activity>
     </application>
 
 </manifest>

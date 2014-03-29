@@ -67,22 +67,24 @@ public final class R {
         public static final int activity_flash_buddy_create_deck=0x7f030001;
         public static final int activity_flash_buddy_create_user=0x7f030002;
         public static final int activity_flash_buddy_displayed_message=0x7f030003;
-        public static final int activity_flash_buddy_modify_decks=0x7f030004;
-        public static final int activity_flash_buddy_study_decks=0x7f030005;
-        public static final int activity_flash_buddy_user=0x7f030006;
-        public static final int activity_xmlparse=0x7f030007;
-        public static final int expandlist_child_item=0x7f030008;
-        public static final int expandlist_group_item=0x7f030009;
+        public static final int activity_flash_buddy_exec_study_deck=0x7f030004;
+        public static final int activity_flash_buddy_modify_decks=0x7f030005;
+        public static final int activity_flash_buddy_study_decks=0x7f030006;
+        public static final int activity_flash_buddy_user=0x7f030007;
+        public static final int activity_xmlparse=0x7f030008;
+        public static final int expandlist_child_item=0x7f030009;
+        public static final int expandlist_group_item=0x7f03000a;
     }
     public static final class menu {
         public static final int flash_buddy=0x7f080000;
         public static final int flash_buddy_create_deck=0x7f080001;
         public static final int flash_buddy_create_user=0x7f080002;
         public static final int flash_buddy_displayed_message=0x7f080003;
-        public static final int flash_buddy_modify_decks=0x7f080004;
-        public static final int flash_buddy_study_decks=0x7f080005;
-        public static final int flash_buddy_user=0x7f080006;
-        public static final int xmlparse=0x7f080007;
+        public static final int flash_buddy_exec_study_deck=0x7f080004;
+        public static final int flash_buddy_modify_decks=0x7f080005;
+        public static final int flash_buddy_study_decks=0x7f080006;
+        public static final int flash_buddy_user=0x7f080007;
+        public static final int xmlparse=0x7f080008;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -115,6 +117,7 @@ public final class R {
         public static final int title_activity_flash_buddy_create_deck=0x7f050022;
         public static final int title_activity_flash_buddy_create_user=0x7f050015;
         public static final int title_activity_flash_buddy_displayed_message=0x7f050012;
+        public static final int title_activity_flash_buddy_exec_study_deck=0x7f050024;
         public static final int title_activity_flash_buddy_modify_decks=0x7f050020;
         public static final int title_activity_flash_buddy_study_decks=0x7f050016;
         public static final int title_activity_flash_buddy_user=0x7f050014;

@@ -37,7 +37,7 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 	private ArrayList<ExpandListGroup> ExpListItems;
 	private ExpandableListView ExpandList;
 	
-	private int selectedFile;
+	private int selectedFile = -1;
 	
 	
 	@Override
