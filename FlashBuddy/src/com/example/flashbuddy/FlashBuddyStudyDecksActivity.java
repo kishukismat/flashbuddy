@@ -21,6 +21,7 @@ import com.example.flashbuddy.*;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +37,12 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	private ArrayList<ExpandListGroup> ExpListItems;
 	private ExpandableListView ExpandList;
 	
+	public final static String FILE_MESSAGE = "com.example.flashbuddy.FILE";
+	
 	private int selectedFile;
+	private String FileName;
+	
+	private static final String TAG="FlashBuddyStudyDecksActivity";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +80,14 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 								ExpandableListView.getPackedPositionForChild(groupPosition, childPosition));
 						parent.setItemChecked(index, true);
 						
+						/*
+						 * Set the index and the name of the selected file
+						 */
 						selectedFile = index;
+						Log.i(TAG,"Retrieving child filename...");
+						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
+						
+						Log.i(TAG,"Filename is: "+FileName);
 						
 						ExpandList.collapseGroup(0);
 						
@@ -126,6 +139,17 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		gru1.setItems( list2 );
 		list.add(gru1);
 		return list;
+	}
+	
+	/**
+	 * onClickStudyDeck : starts the target deck in a study session
+	 * 
+	 * @param view
+	 */
+	public void onClickStudyDeck( View view){
+		Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
+		intent.putExtra( FILE_MESSAGE, FileName );
+		startActivity(intent);
 	}
 
 }

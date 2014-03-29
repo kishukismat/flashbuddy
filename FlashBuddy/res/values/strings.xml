@@ -44,5 +44,6 @@
     <string name="title_activity_xmlparse">XMLParseActivity</string>
     <string name="title_activity_flash_buddy_create_deck">FlashBuddyCreateDeckActivity</string>
     <string name="study_deck_button">Study Deck</string>
+    <string name="title_activity_flash_buddy_exec_study_deck">FlashBuddyExecStudyDeck</string>
 
 </resources>
