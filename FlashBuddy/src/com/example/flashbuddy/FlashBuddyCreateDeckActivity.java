@@ -12,10 +12,15 @@
 
 package com.example.flashbuddy;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import com.example.flashbuddy.*;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -52,11 +57,26 @@ public class FlashBuddyCreateDeckActivity extends Activity {
 		/* 
 		 * for numcards, create the new cards
 		 */
+		/*
+		 * TODO
+		 */
 		
 		/* 
 		 * write the deck out to a file 
 		 */
-		deck.writeDeck();
+		try {
+			FileOutputStream of = openFileOutput( deck.getTitle()+".xml", Context.MODE_PRIVATE);
+			deck.writeDeck(of);
+			try {
+				of.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
     	startActivity(returnUserIntent);
