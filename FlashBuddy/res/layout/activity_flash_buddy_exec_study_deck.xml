@@ -8,4 +8,79 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".FlashBuddyExecStudyDeck" >
 
+    <EditText
+        android:id="@+id/cardDesignator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/QuestionBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardDesignator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="@string/question_title_text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cardDesignator"
+        android:layout_below="@+id/QuestionBanner"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/AnswerBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/QuestionBanner"
+        android:layout_below="@+id/questionText"
+        android:layout_marginTop="42dp"
+        android:text="@string/answer_title_text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/answerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionText"
+        android:layout_below="@+id/AnswerBanner"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/AnswerButton"
+        android:layout_width="167dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/answerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:onClick="onClickShowAnswer"
+        android:text="@string/show_answer_text" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/AnswerButton"
+        android:layout_below="@+id/AnswerButton"
+        android:onClick="onClickNextCard"
+        android:text="@string/next_button_text" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nextButton"
+        android:layout_alignBottom="@+id/nextButton"
+        android:layout_alignLeft="@+id/AnswerButton"
+        android:onClick="onClickDoneStudying"
+        android:text="@string/done_button_text" />
+
 </RelativeLayout>
