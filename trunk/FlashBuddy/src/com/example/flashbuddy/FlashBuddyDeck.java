@@ -606,6 +606,13 @@ public class FlashBuddyDeck {
 						String question, 
 						String answer ){
 		
+		/*
+		 * setup the array list 
+		 */
+		if( this.cards == null ){
+			this.cards = new ArrayList<FlashBuddyCard>();
+		}
+		
 		FlashBuddyCard card = new FlashBuddyCard (id, timer, name, question, answer);
 		cards.add(card);
 		this.numCards++;
