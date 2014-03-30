@@ -12,6 +12,11 @@
 
 package com.example.flashbuddy;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.xmlpull.v1.XmlPullParserException;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -40,7 +45,34 @@ public class FlashBuddyExecStudyDeck extends Activity {
 		/* 
 		 * Validate the file then read it into a Decks object
 		 */
-		//myDeck.readDeck("decks/"+FileName);
+		myDeck = new FlashBuddyDeck();
+		try {
+			InputStream in = null;
+			try {
+				in = getAssets().open("decks/"+FileName);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			myDeck.readDeck(in);
+			
+			try {
+				in.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (XmlPullParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*
+		 * At this point, we have all the data for the current
+		 * flash card deck.  Setup the interface based upon
+		 * what we read.
+		 */
 	}
 
 	@Override
