@@ -67,6 +67,14 @@ public class FlashBuddyDeck {
 	}
 	
 	/**
+	 * Returns a list of FlashBuddyDeck cards
+	 * @return a list of cards
+	 */
+	public List<FlashBuddyCard> getCards(){
+		return this.cards;
+	}
+	
+	/**
 	 * setTitle : sets the title of the target FlashBuddy deck
 	 * @param title String variable for the title
 	 * @return returns true on success, false otherwise
