@@ -24,6 +24,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -127,8 +128,7 @@ public class FlashBuddyDeck {
 	public Boolean readDeck( InputStream in ) throws XmlPullParserException{
 		
 		XmlPullParser parser;
-		InputStream inputStream = in;
-		
+				
 		Log.i(TAG,"Enter readDeck...");
 		
 		
@@ -138,7 +138,7 @@ public class FlashBuddyDeck {
 				
 		parser = Xml.newPullParser();
 		parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-		parser.setInput(inputStream, null);
+		parser.setInput(in, null);
 			
 		try {
 			parser.nextTag();
@@ -169,6 +169,10 @@ public class FlashBuddyDeck {
 	 * @throws IOException
 	 */
 	private void readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
+
+		if( this.cards == null){
+			this.cards = new ArrayList<FlashBuddyCard>();
+		}
 		
 		parser.require(XmlPullParser.START_TAG, ns, "deck");
 
@@ -216,6 +220,7 @@ public class FlashBuddyDeck {
 		String cardQuestion = null;
 		String cardAnswer = null;
 		
+			
 		while (parser.next() != XmlPullParser.END_TAG) {
 			
 			if (parser.getEventType() != XmlPullParser.START_TAG) {
