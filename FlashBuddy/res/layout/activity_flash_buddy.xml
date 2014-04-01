@@ -1,60 +1,80 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0"?>
+
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/flashbuddymain"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".FlashBuddy" >
 
-    <EditText
-        android:id="@+id/username_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="@string/username" />
+    <Button
+        android:id="@+id/button2"
+        style="@drawable/roundedbutton"
+        android:layout_width="160dp"
+        android:layout_height="67dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1"
+        android:background="@drawable/roundedbutton"
+        android:onClick="onClickAuthUser"
+        android:text="@string/log_in"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="160dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/password_text"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="onClickCreateUser"
+        android:text="@string/create_new_account"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/username_text"
         android:layout_below="@+id/username_text"
+        android:layout_centerHorizontal="true"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
 
     <TextView
         android:id="@+id/LogInBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/username_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:gravity="center"
         android:text="@string/log_in_banner"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="80sp" />
 
-    <Button
-        android:id="@+id/button1"
+    <EditText
+        android:id="@+id/username_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:onClick="onClickCreateUser"
-        android:text="@string/create_new_account" />
+        android:layout_alignLeft="@+id/password_text"
+        android:layout_below="@+id/LogInBanner"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" >
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password_text"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickAuthUser"
-        android:text="@string/log_in" />
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -35,6 +36,9 @@ public class FlashBuddyUserActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_user);
 		
@@ -56,7 +60,7 @@ public class FlashBuddyUserActivity extends Activity {
 		unpackAssets("Grade_One_Subtraction.xml");
 		
 		// Show the Up button in the action bar.
-		setupActionBar();
+		//setupActionBar();
 		
 		// Create a new intent 
 		Intent intent = getIntent();	
@@ -75,13 +79,14 @@ public class FlashBuddyUserActivity extends Activity {
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
 	 */
+	/*
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void setupActionBar() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
-
+*/
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

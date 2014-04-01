@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ExpandableListView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -46,6 +47,9 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_study_decks);
 		

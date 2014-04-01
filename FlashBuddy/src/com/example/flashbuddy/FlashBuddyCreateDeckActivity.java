@@ -22,16 +22,26 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class FlashBuddyCreateDeckActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_create_deck);
+		
+		TextView CreateDeckBanner=(TextView)findViewById(R.id.CreateDeckBanner);
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/FantasticParty.ttf");
+        CreateDeckBanner.setTypeface(typeFace);
 	}
 
 	@Override
