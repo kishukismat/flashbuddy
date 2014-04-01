@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/flashbuddymain"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -10,12 +11,54 @@
 
     <TextView
         android:id="@+id/CreateDeckBanner"
+        style="android:textViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
         android:text="@string/createdeck_text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:typeface="normal" />
+
+    <Button
+        android:id="@+id/create_deck_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/create_deck_numcards"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="onClickCreateDeck"
+        android:text="@string/create_deck"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/create_deck_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/create_deck_name"
+        android:layout_below="@+id/create_deck_name"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/decksubject"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
+
+    <EditText
+        android:id="@+id/create_deck_numcards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/create_deck_subject"
+        android:layout_below="@+id/create_deck_subject"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/numcards"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
 
     <EditText
         android:id="@+id/create_deck_name"
@@ -23,37 +66,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/CreateDeckBanner"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="@string/deckname" />
-    
-    <EditText
-        android:id="@+id/create_deck_subject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/create_deck_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/decksubject" />
-    
-    <EditText
-        android:id="@+id/create_deck_numcards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/create_deck_subject"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/numcards" />
-    
-    <Button
-        android:id="@+id/create_deck_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/create_deck_numcards"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickCreateDeck"
-        android:text="@string/create_deck" />
+        android:hint="@string/deckname"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
 
 </RelativeLayout>

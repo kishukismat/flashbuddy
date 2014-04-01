@@ -19,10 +19,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.flashbuddy.FlashBuddyAuth;
 
@@ -38,8 +41,15 @@ public class FlashBuddy extends Activity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+    	//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_buddy);
+        
+        TextView welcome=(TextView)findViewById(R.id.LogInBanner);
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/FantasticParty.ttf");
+        welcome.setTypeface(typeFace);
     }
 
 
