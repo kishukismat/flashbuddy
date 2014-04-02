@@ -20,8 +20,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Typeface;
+import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -52,6 +54,29 @@ public class FlashBuddy extends Activity {
         welcome.setTypeface(typeFace);
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event){ 
+            
+        int action = MotionEventCompat.getActionMasked(event);
+            
+        switch(action) {
+            case (MotionEvent.ACTION_DOWN) :
+            	AllowAccess();
+                return true;
+            case (MotionEvent.ACTION_MOVE) :
+                return true;
+            case (MotionEvent.ACTION_UP) :
+            	Intent helpIntent = new Intent( this, HelpLogin.class );
+    			startActivity(helpIntent);
+                return true;
+            case (MotionEvent.ACTION_CANCEL) :
+                return true;
+            case (MotionEvent.ACTION_OUTSIDE) :
+                return true;      
+            default : 
+                return super.onTouchEvent(event);
+        }      
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,6 +91,21 @@ public class FlashBuddy extends Activity {
      */
     public void onClickAuthUser(View view) {
     	
+    	AllowAccess();
+    	
+    }
+    
+    /**
+     * Handles the button click from the Create User Account button
+     * @param view the current application view
+     */
+    public void onClickCreateUser(View view) {
+    	Intent createUserIntent = new Intent( this, FlashBuddyCreateUserActivity.class );
+    	startActivity(createUserIntent);
+    }
+    
+    public boolean AllowAccess( )
+    {
     	Intent intent = new Intent( this, FlashBuddyUserActivity.class);
     	
     	EditText username = (EditText)findViewById(R.id.username_text);
@@ -133,14 +173,7 @@ public class FlashBuddy extends Activity {
         	startActivity(failedIntent);
     	}
     	
+    	return true;
     }
     
-    /**
-     * Handles the button click from the Create User Account button
-     * @param view the current application view
-     */
-    public void onClickCreateUser(View view) {
-    	Intent createUserIntent = new Intent( this, FlashBuddyCreateUserActivity.class );
-    	startActivity(createUserIntent);
-    }
 }

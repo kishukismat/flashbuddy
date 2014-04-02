@@ -25,6 +25,7 @@
     <string name="view_flash_decks">View Flash Decks</string>
     <string name="create_flash_decks">Create Flash Decks</string>
     <string name="share_flash_decks">Share Flash Decks</string>
+    <string name="help_login">Login Help</string>
     <string name="title_activity_flash_buddy_displayed_message">FlashBuddy Message</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_flash_buddy_user">FlashBuddy</string>
@@ -40,6 +41,8 @@
     <string name="create_deck_button">Create Deck</string>
     <string name="delete_deck_button">Delete Deck</string>
     <string name="title_activity_flash_buddy_modify_decks">FlashBuddyModifyDecksActivity</string>
+    <string name="loginscreenhelp">Swipe up to see help!</string>
+    <string name="loginhelp">To Login\n\n\t1) Enter your username\n\t2) Enter your password\n\nNo Account?\n\n\t1) Select Create New Account\n\nNavigation\n\n\t Swipe up to see help information.\n\t Swipe down to go back.\n</string>
 
     <color name="flashbuddymain">#2EC178</color>
 	<color name="buttoncolor">#259A60</color>
