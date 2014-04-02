@@ -70,6 +70,10 @@
             android:name="com.example.flashbuddy.FlashBuddyExecStudyDeck"
             android:label="@string/title_activity_flash_buddy_exec_study_deck" >
         </activity>
+        <activity
+            android:name="com.example.flashbuddy.HelpLogin"
+            android:label="@string/help_login" >
+        </activity>
     </application>
 
 </manifest>
