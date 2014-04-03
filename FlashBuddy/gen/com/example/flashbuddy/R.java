@@ -100,6 +100,7 @@ public final class R {
         public static final int flash_buddy_modify_decks=0x7f080005;
         public static final int flash_buddy_study_decks=0x7f080006;
         public static final int flash_buddy_user=0x7f080007;
+        public static final int xmlparse=0x7f080008;
     }
     public static final class string {
         public static final int action_settings=0x7f050006;

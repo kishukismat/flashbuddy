@@ -16,17 +16,21 @@
         android:layout_above="@+id/StudyDeck"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="56dp"
-        android:layout_gravity="center">
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll" >
+
     </ExpandableListView>
-    
+
     <Button
         android:id="@+id/StudyDeck"
         style="@drawable/roundedbutton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="27dp"
         android:background="@drawable/roundedbutton"
         android:onClick="onClickStudyDeck"
         android:text="@string/study_deck_button"
