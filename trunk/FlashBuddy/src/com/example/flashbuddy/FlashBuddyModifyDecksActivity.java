@@ -13,13 +13,19 @@
 package com.example.flashbuddy;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import com.example.flashbuddy.Adapter.ExpandListAdapter;
 import com.example.flashbuddy.*;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
@@ -29,6 +35,7 @@ import android.view.Window;
 import android.widget.ExpandableListView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
@@ -54,13 +61,9 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		 * list the files in our directory 
 		 */
 		String[] files = null;
-		//try {
-			//files = this.getAssets().list("decks");
-		files = getFilesDir().list();
-		//} catch (IOException e) {
-		//	e.printStackTrace();
-		//}
 		
+		files = getFilesDir().list();
+				
 		/* 
 		 * setup the menu
 		 */
@@ -137,6 +140,77 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		gru1.setItems( list2 );
 		list.add(gru1);
 		return list;
+	}
+	
+	/**
+	 * onClickShareDeck : handles the button click for the "Share Deck" button
+	 * @param view
+	 */
+	public void onClickShareDeck( View view ){
+
+		/* 
+		 * make sure the file name is valid
+		 */
+		if( this.FileName.length() == 0 ){
+			return ;
+		}
+		
+		/* 
+		 * Step 1 : copy the file to an external location
+		 */
+		InputStream in = null;
+		OutputStream out = null;
+		File outFile = null;
+		
+		try{ 
+			in = openFileInput(FileName);
+			outFile = new File(getExternalFilesDir(null), FileName);
+			outFile.createNewFile();
+			
+			out = new FileOutputStream(outFile);
+			
+			copyFile(in, out);
+			in.close();
+	        in = null;
+	        out.flush();
+	        out.close();
+	        out = null;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		/* 
+		 * Step 2 : attach and send an email 
+		 */
+		Intent email=new Intent(android.content.Intent.ACTION_SEND);
+		//String pathname= Environment.getExternalStorageDirectory().getAbsolutePath();
+		File myFile=new File(FileName);
+		email.setType("plain/text");
+		//email.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(new File(getExternalFilesDir(null),FileName)));
+		email.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(myFile));
+		email.putExtra(Intent.EXTRA_SUBJECT, "FlashBuddy Study Deck : " + FileName);
+		email.putExtra(Intent.EXTRA_TEXT, "Sharing FlashBuddy Study Deck " + FileName + " with you!");
+		startActivity(Intent.createChooser(email, "E-mail"));
+		
+		/*
+		 * Step 3 : delete the temporary file from external storage
+		 */
+		outFile.delete();
+
+	}
+	
+	/**
+	 * copyFile : copys from the input buffer to the output buffer
+	 * @param in
+	 * @param out
+	 * @throws IOException
+	 */
+	private void copyFile(InputStream in, OutputStream out) throws IOException {
+	    byte[] buffer = new byte[1024];
+	    int read;
+	    while((read = in.read(buffer)) != -1){
+	      out.write(buffer, 0, read);
+	    }
 	}
 	
 	/**
