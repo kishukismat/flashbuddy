@@ -17,6 +17,7 @@
     <string name="deckname">Insert Deck Name</string>
     <string name="decksubject">Insert Deck Subject</string>
     <string name="create_deck">Create Deck</string>
+    <string name="share_deck">Share Deck</string>
     <string name="numcards">Num Cards</string>
     <string name="create_password_1">Enter a password</string>
     <string name="create_password_2">Enter it again</string>
@@ -45,9 +46,9 @@
     <string name="loginhelp">To Login\n\n\t1) Enter your username\n\t2) Enter your password\n\nNo Account?\n\n\t1) Select Create New Account\n\nNavigation\n\n\t Swipe up to see help information.\n\t Swipe down to go back.\n</string>
 
     <color name="flashbuddymain">#2EC178</color>
-	<color name="buttoncolor">#259A60</color>
-	<color name="buttongradient">#479C71</color>
-	<color name="hint">#C2C2A3</color>
+    <color name="buttoncolor">#259A60</color>
+    <color name="buttongradient">#479C71</color>
+    <color name="hint">#C2C2A3</color>
     <color name="Black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="ExpandChildBackground">#FFAFABAB</color>
@@ -59,5 +60,7 @@
     <string name="title_activity_flash_buddy_create_deck">FlashBuddyCreateDeckActivity</string>
     <string name="study_deck_button">Study Deck</string>
     <string name="title_activity_flash_buddy_exec_study_deck">FlashBuddyExecStudyDeck</string>
+    <string name="title_activity_flash_buddy_card_input">FlashBuddyCardInputActivity</string>
+    <string name="title_activity_flash_buddy_edit_deck">FlashBuddyEditDeckActivity</string>
 
 </resources>
