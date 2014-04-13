@@ -504,12 +504,12 @@ public class FlashBuddyDeck {
 		/**
 		 * Close the file
 		 */
-		try {
-			outputStream.close();
-		} catch (IOException e) {
+		//try {
+		//	outputStream.close();
+		//} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//	e.printStackTrace();
+		//}
 		
 		return true;
 	}

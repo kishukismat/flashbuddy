@@ -31,6 +31,10 @@ import android.widget.TextView;
 
 public class FlashBuddyCreateDeckActivity extends Activity {
 
+	public final static String DECK_NAME_MESSAGE = "com.example.flashbuddy.DECKNAME";
+	public final static String DECK_SUBJECT_MESSAGE = "com.example.flashbuddy.DECKSUBJECT";
+	public final static String DECK_NUMCARDS_MESSAGE = "com.example.flashbuddy.DECKNUMCARDS";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		//Remove title bar
@@ -56,40 +60,19 @@ public class FlashBuddyCreateDeckActivity extends Activity {
 		EditText name = (EditText)findViewById(R.id.create_deck_name);
 		EditText subject = (EditText)findViewById(R.id.create_deck_subject);
 		EditText numcards = (EditText)findViewById(R.id.create_deck_numcards);
-		int numCardsInt = Integer.parseInt(numcards.getText().toString());
+		
 		
 		/* 
-		 * create the new deck
+		 * Open the window for the card inputs
 		 */
-		FlashBuddyDeck deck = new FlashBuddyDeck( name.getText().toString(), 
-										subject.getText().toString() );
-		
-		/* 
-		 * for numcards, create the new cards
-		 */
-		/*
-		 * TODO
-		 */
-		
-		/* 
-		 * write the deck out to a file 
-		 */
-		try {
-			FileOutputStream of = openFileOutput( deck.getTitle()+".xml", Context.MODE_PRIVATE);
-			deck.writeDeck(of);
-			try {
-				of.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
-    	startActivity(returnUserIntent);
+		Intent intent = new Intent( this, FlashBuddyCardInputActivity.class);
+		intent.putExtra( DECK_NAME_MESSAGE, name.getText().toString() );
+		intent.putExtra( DECK_SUBJECT_MESSAGE, subject.getText().toString() );
+		intent.putExtra( DECK_NUMCARDS_MESSAGE, numcards.getText().toString() );
+		startActivity(intent);
+						
+		//Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
+    	//startActivity(returnUserIntent);
 	}
 
 }
