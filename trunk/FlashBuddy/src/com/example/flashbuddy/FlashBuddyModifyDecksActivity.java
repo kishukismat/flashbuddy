@@ -153,9 +153,9 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 	 * @param view
 	 */
 	public void onClickEditDeck( View view ){
-		//Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
-		//intent.putExtra( FILE_MESSAGE, FileName );
-		//startActivity(intent);
+		Intent intent = new Intent( this, FlashBuddyEditDeckActivity.class);
+		intent.putExtra( FILE_MESSAGE, FileName );
+		startActivity(intent);
 	}
 	
 	/**
