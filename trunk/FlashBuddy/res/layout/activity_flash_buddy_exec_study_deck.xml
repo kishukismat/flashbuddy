@@ -8,19 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".FlashBuddyExecStudyDeck" >
-
-    <EditText
-        android:inputType="none"
-        android:id="@+id/cardDesignator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:textColor="@color/white" >
-
-        <requestFocus />
-    </EditText>
     
     <EditText
         android:id="@+id/questionText"
@@ -30,39 +17,6 @@
         android:layout_below="@+id/QuestionBanner"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:textColor="@color/white" />
-    
-        <TextView
-        android:id="@+id/QuestionBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardDesignator"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="@string/question_title_text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white" />
-    
-        
-        <EditText
-        android:id="@+id/answerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/AnswerButton"
-        android:layout_alignLeft="@+id/questionText"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:textColor="@color/white" />
-        
-    <TextView
-        android:id="@+id/AnswerBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/answerText"
-        android:layout_centerHorizontal="true"
-        android:text="@string/answer_title_text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/white" />
 
 
@@ -91,17 +45,76 @@
         android:text="@string/show_answer_text"
         android:textColor="@color/white" />
 
+    <TextView
+        android:id="@+id/QuestionBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardDesignator"
+        android:layout_centerHorizontal="true"
+        android:text="@string/question_title_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/AnswerBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/answer_title_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/answerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionText"
+        android:layout_below="@+id/AnswerBanner"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/TimerBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AnswerBanner"
+        android:layout_below="@+id/answerText"
+        android:text="Timer"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/cardDesignator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="none"
+        android:textColor="@color/white" />
+
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/AnswerButton"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="18dp"
         android:background="@drawable/roundedbutton"
         android:onClick="onClickNextCard"
         android:text="@string/next_button_text"
         android:textColor="@color/white" />
 
+    <EditText
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/answerText"
+        android:layout_below="@+id/TimerBanner"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
