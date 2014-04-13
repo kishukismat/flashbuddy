@@ -21,6 +21,7 @@ import com.example.flashbuddy.*;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,9 +38,9 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 	private ExpandListAdapter ExpAdapter;
 	private ArrayList<ExpandListGroup> ExpListItems;
 	private ExpandableListView ExpandList;
-	
-	private int selectedFile = -1;
-	
+	private String FileName;
+	private int selectedFile;
+	public final static String FILE_MESSAGE = "com.example.flashbuddy.FILE";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +54,12 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		 * list the files in our directory 
 		 */
 		String[] files = null;
-		try {
-			files = this.getAssets().list("decks");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		//try {
+			//files = this.getAssets().list("decks");
+		files = getFilesDir().list();
+		//} catch (IOException e) {
+		//	e.printStackTrace();
+		//}
 		
 		/* 
 		 * setup the menu
@@ -79,8 +81,13 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 								ExpandableListView.getPackedPositionForChild(groupPosition, childPosition));
 						parent.setItemChecked(index, true);
 						
+						/*
+						 * Set the index and the name of the selected file
+						 */
 						selectedFile = index;
 						
+						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
+																		
 						ExpandList.collapseGroup(0);
 						
 						return true;
@@ -132,9 +139,51 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		return list;
 	}
 	
+	/**
+	 * onClickNewDeck : handles the button click for the "Create Deck" button
+	 * @param view
+	 */
 	public void onClickNewDeck( View view ){
 		Intent createDecksIntent = new Intent( this, FlashBuddyCreateDeckActivity.class );
 		startActivity( createDecksIntent );
+	}
+	
+	/**
+	 * onClickEditDeck : handles the button click for the "Edit Deck" button 
+	 * @param view
+	 */
+	public void onClickEditDeck( View view ){
+		//Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
+		//intent.putExtra( FILE_MESSAGE, FileName );
+		//startActivity(intent);
+	}
+	
+	/**
+	 * onClickDeleteDeck : handles the button click for the "Delete Deck" button
+	 * @param view
+	 */
+	public void onClickDeleteDeck( View view ){
+		
+		if( this.FileName.length() == 0){
+			/**
+			 * DO NOTHING!  The user hasn't entered anything
+			 */
+			return ;
+		}
+		
+		/**
+		 * deletes the target file name
+		 * TODO: insert a dialog box to confirm the deletion
+		 */
+		deleteFile(this.FileName);
+		
+		/** 
+		 * reset the drop-down box
+		 */
+		String[] files = getFilesDir().list();
+		this.ExpListItems = SetStandardGroups(files);
+		this.ExpAdapter = new ExpandListAdapter(FlashBuddyModifyDecksActivity.this,ExpListItems);
+		this.ExpandList.setAdapter(this.ExpAdapter);
 	}
 
 }
