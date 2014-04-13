@@ -162,6 +162,34 @@ public class FlashBuddyCardInputActivity extends Activity {
 	 */
 	public void onClickWriteCard( View view ){
 		
+		TextView questionTextView = (TextView) findViewById(R.id.questionEntry);
+		TextView answerTextView = (TextView) findViewById(R.id.answerEntry);
+		TextView timerTextView = (TextView) findViewById(R.id.timerEntry);
+		
+		/* 
+		 * grab the data from the text views
+		 */
+		String localQuestion = questionTextView.getText().toString();
+		String localAnswer = answerTextView.getText().toString();
+		int localTimer = Integer.parseInt(timerTextView.getText().toString());
+		
+		if( this.recycle != 1 ){
+			/* 
+			 * we need to write out the last card
+			 */
+			this.myDeck.addCard(currentCardIndex, localTimer, 
+					"Question # "+Integer.toString(this.currentCardIndex), 
+					localQuestion, localAnswer);
+		}else{
+			/*
+			 * write the data out to a specific card
+			 */
+			this.currentCard = this.cards.get(this.currentCardIndex-1);
+			this.currentCard.setAnswer(localAnswer);
+			this.currentCard.setQuestion(localQuestion);
+			this.currentCard.setTimer(localTimer);
+		}
+		
 		try {
 			/**
 			 * open the file
