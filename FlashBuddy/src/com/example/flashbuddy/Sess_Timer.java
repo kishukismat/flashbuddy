@@ -37,14 +37,12 @@ public class Sess_Timer extends Activity implements OnClickListener {
 	//How many minutes are left for the session.
 	long minLeft = secLeft / 60;
 	
- 
+ /*
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			
-			/*
-			 * Create the button and layout for the timer.
-			 */
+			// Create the button and layout for the timer
 			
 			setContentView(R.layout.session_timer);
 			start = (Button) this.findViewById(R.id.session_timer);
@@ -53,6 +51,7 @@ public class Sess_Timer extends Activity implements OnClickListener {
 			sessionTimer = new FlashBuddyTimer(startTime, interval);
 			text.setText(minLeft + ":" + secLeft);
  }
+ */
  
 	@Override
 	public void onClick(View v) {

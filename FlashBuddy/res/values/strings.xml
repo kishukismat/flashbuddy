@@ -45,6 +45,12 @@
     <string name="loginscreenhelp">Swipe up to see help!</string>
     <string name="loginhelp">To Login\n\n\t1) Enter your username\n\t2) Enter your password\n\nNo Account?\n\n\t1) Select Create New Account\n\nNavigation\n\n\t Swipe up to see help information.\n\t Swipe down to go back.\n</string>
 
+    <color name="lightblue">#55606e</color>
+    <color name="red">#dd514c</color>
+    <color name="darkblue">#343a41</color>
+    <color name="green">#4FA044</color>
+    <color name="gray">#D7D7D7</color>
+    <color name="bluebutton">#7b93af</color>
     <color name="flashbuddymain">#2EC178</color>
     <color name="buttoncolor">#259A60</color>
     <color name="buttongradient">#479C71</color>
