@@ -2,66 +2,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/flashbuddymain"
+    android:background="@color/darkblue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".FlashBuddyModifyDecksActivity" >
 
-    <Button
-        android:id="@+id/EditDeck"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_alignBottom="@+id/ModifyFileList"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="169dp"
-        android:background="@drawable/roundedbutton"
-        android:text="@string/edit_deck_button"
-        android:onClick="onClickEditDeck"
-        android:textColor="@color/white" />
+        android:src="@drawable/paper" />
 
     <ExpandableListView
         android:id="@+id/ModifyFileList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/EditDeck"
-        android:transcriptMode="alwaysScroll"
-        android:layout_centerHorizontal="true" >
+        android:layout_width="280dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:transcriptMode="alwaysScroll" >
     </ExpandableListView>
 
     <Button
         android:id="@+id/DeleteDeck"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditDeck"
-        android:layout_alignTop="@+id/EditDeck"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/roundedbutton"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/EditDeck"
+        android:layout_alignBottom="@+id/EditDeck"
+        android:layout_alignRight="@+id/imageView1"
+        android:background="@color/red"
         android:onClick="onClickDeleteDeck"
         android:text="@string/delete_deck_button"
         android:textColor="@color/white" />
 
     <Button
+        android:id="@+id/ShareDeck"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/CreateDeck"
+        android:layout_alignBottom="@+id/CreateDeck"
+        android:layout_alignLeft="@+id/DeleteDeck"
+        android:background="@drawable/rightarrow"
+        android:onClick="onClickShareDeck"
+        android:text="@string/share_deck"
+        android:textColor="@color/white" />
+
+    <Button
         android:id="@+id/CreateDeck"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/DeleteDeck"
-        android:layout_below="@+id/DeleteDeck"
-        android:background="@drawable/roundedbutton"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/EditDeck"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/leftarrow"
         android:onClick="onClickNewDeck"
         android:text="@string/create_deck_button"
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/ShareDeck"
+        android:id="@+id/EditDeck"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/CreateDeck"
-        android:layout_below="@+id/CreateDeck"
-        android:background="@drawable/roundedbutton"
-        android:onClick="onClickShareDeck"
-        android:text="@string/share_deck"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="13dp"
+        android:background="@color/green"
+        android:onClick="onClickEditDeck"
+        android:text="@string/edit_deck_button"
         android:textColor="@color/white" />
     
 </RelativeLayout>
