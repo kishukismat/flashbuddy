@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
@@ -24,6 +25,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 
@@ -42,7 +44,45 @@ public class FlashBuddyCreateUserActivity extends Activity {
 		TextView createUserBanner=(TextView)findViewById(R.id.CreateUserBanner);
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/FantasticParty.ttf");
         createUserBanner.setTypeface(typeFace);
+        
+        Button createButton = (Button)findViewById(R.id.create_user_button);
+        createButton.scheduleDrawable(createButton.getBackground(), checkInfo2, 1000);
 	}
+	
+	final Runnable checkInfo2 = new Runnable()
+    {
+    	public void run()
+    	{
+	    	EditText username = (EditText)findViewById(R.id.create_username_text);
+	    	EditText password = (EditText)findViewById(R.id.create_password_text_1);
+	    	EditText password2 = (EditText)findViewById(R.id.create_password_text_2);
+	    	
+	    	String theUsername = username.getText().toString();
+			String thePassword = password.getText().toString();
+			String thePassword2 = password2.getText().toString();
+	    	
+			Button createButton = (Button)findViewById(R.id.create_user_button);
+			
+			if (theUsername.equals("")) 
+			{ 
+				createButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			if (thePassword.equals("")) 
+			{ 
+				createButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			if (thePassword2.equals("")) 
+			{ 
+				createButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			else
+			{
+				createButton.setBackgroundColor(Color.parseColor("#4FA044"));
+			}
+			
+			createButton.scheduleDrawable(createButton.getBackground(), checkInfo2, 1000);
+    	}
+    };
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
