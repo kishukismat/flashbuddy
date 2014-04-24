@@ -64,7 +64,7 @@ public class FlashBuddyCardInputActivity extends Activity {
         cardDesignator.setText("Card 1 of " + Integer.toString(deckNumCards));
         
         TextView timerView = (TextView) findViewById(R.id.timerEntry);
-        timerView.setText("0");
+        timerView.setText("11");
         
         myDeck = new FlashBuddyDeck(deckName,deckSubject);
         
@@ -147,7 +147,7 @@ public class FlashBuddyCardInputActivity extends Activity {
 							localQuestion, localAnswer);
 			
 			this.currentCardIndex++;
-			timerTextView.setText("0");
+			timerTextView.setText("11");
 			answerTextView.setText(" ");
 			questionTextView.setText(" ");
 		}

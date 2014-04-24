@@ -24,10 +24,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class FlashBuddyExecStudyDeck extends Activity {
@@ -199,6 +203,23 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	final Runnable myUpdateNewTime = new Runnable(){
 		public void run(){
 			timerView.setText(String.valueOf(timerTick));
+			
+			if( timerTick == 6 || timerTick == 5 || timerTick == 4 )
+			{
+				// Text color should be yellow
+				timerView.setTextColor(Color.parseColor("#CCFF66"));
+			}
+			else if( timerTick == 3 || timerTick == 2 || timerTick == 1 )
+			{
+				// Text color should be red
+				timerView.setTextColor(Color.parseColor("#DD514C"));
+			}
+			else
+			{
+				// Text color should be green
+				timerView.setTextColor(Color.parseColor("#4FA044"));
+				timerView.setTypeface(null,Typeface.BOLD);
+			}
 		}
 	};
 	

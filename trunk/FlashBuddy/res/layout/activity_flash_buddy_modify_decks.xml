@@ -13,19 +13,40 @@
         android:id="@+id/imageView1"
         android:layout_width="320dp"
         android:layout_height="320dp"
-        android:layout_alignBottom="@+id/ModifyFileList"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/paper" />
+        android:src="@drawable/white_board" />
 
     <ExpandableListView
         android:id="@+id/ModifyFileList"
         android:layout_width="280dp"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="280dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="12dp"
         android:transcriptMode="alwaysScroll" >
+
     </ExpandableListView>
+
+    <Button
+        android:id="@+id/ShareDeck"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/DeleteDeck"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rightarrow"
+        android:onClick="onClickShareDeck"
+        android:text="@string/share_deck"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/CreateDeck"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/EditDeck"
+        android:layout_alignTop="@+id/ShareDeck"
+        android:background="@drawable/leftarrow"
+        android:onClick="onClickNewDeck"
+        android:text="@string/create_deck_button"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/DeleteDeck"
@@ -40,36 +61,12 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/ShareDeck"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignBaseline="@+id/CreateDeck"
-        android:layout_alignBottom="@+id/CreateDeck"
-        android:layout_alignLeft="@+id/DeleteDeck"
-        android:background="@drawable/rightarrow"
-        android:onClick="onClickShareDeck"
-        android:text="@string/share_deck"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/CreateDeck"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignLeft="@+id/EditDeck"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/leftarrow"
-        android:onClick="onClickNewDeck"
-        android:text="@string/create_deck_button"
-        android:textColor="@color/white" />
-
-    <Button
         android:id="@+id/EditDeck"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:layout_above="@+id/CreateDeck"
         android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="13dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/green"
         android:onClick="onClickEditDeck"
         android:text="@string/edit_deck_button"

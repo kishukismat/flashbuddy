@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:contentDescription="paper"
-        android:src="@drawable/paper" />
+        android:src="@drawable/white_board" />
 
     <ExpandableListView
         android:id="@+id/StudyFileList"
