@@ -14,6 +14,7 @@
         android:layout_width="320dp"
         android:layout_height="320dp"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/whiteboard"
         android:src="@drawable/white_board" />
 
     <ExpandableListView
@@ -32,7 +33,7 @@
         android:layout_height="60dp"
         android:layout_alignLeft="@+id/DeleteDeck"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/rightarrow"
+        android:background="@color/bluebutton"
         android:onClick="onClickShareDeck"
         android:text="@string/share_deck"
         android:textColor="@color/white" />
@@ -43,7 +44,7 @@
         android:layout_height="60dp"
         android:layout_alignLeft="@+id/EditDeck"
         android:layout_alignTop="@+id/ShareDeck"
-        android:background="@drawable/leftarrow"
+        android:background="@color/green"
         android:onClick="onClickNewDeck"
         android:text="@string/create_deck_button"
         android:textColor="@color/white" />
@@ -55,7 +56,7 @@
         android:layout_alignBaseline="@+id/EditDeck"
         android:layout_alignBottom="@+id/EditDeck"
         android:layout_alignRight="@+id/imageView1"
-        android:background="@color/red"
+        android:background="@color/bluebutton"
         android:onClick="onClickDeleteDeck"
         android:text="@string/delete_deck_button"
         android:textColor="@color/white" />
@@ -67,7 +68,7 @@
         android:layout_above="@+id/CreateDeck"
         android:layout_alignLeft="@+id/imageView1"
         android:layout_marginBottom="12dp"
-        android:background="@color/green"
+        android:background="@color/bluebutton"
         android:onClick="onClickEditDeck"
         android:text="@string/edit_deck_button"
         android:textColor="@color/white" />

@@ -44,7 +44,8 @@
     <string name="title_activity_flash_buddy_modify_decks">FlashBuddyModifyDecksActivity</string>
     <string name="loginscreenhelp">Swipe up to see help!</string>
     <string name="loginhelp">To Login\n\n\t1) Enter your username\n\t2) Enter your password\n\nNo Account?\n\n\t1) Select Create New Account\n\nNavigation\n\n\t Swipe up to see help information.\n\t Swipe down to go back.\n</string>
-
+ 	<string name="whiteboard">Whiteboard Drawable</string>
+ 	
     <color name="lightblue">#55606e</color>
     <color name="red">#dd514c</color>
     <color name="darkblue">#343a41</color>

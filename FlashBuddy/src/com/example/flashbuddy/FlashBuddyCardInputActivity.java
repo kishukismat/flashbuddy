@@ -215,7 +215,11 @@ public class FlashBuddyCardInputActivity extends Activity {
 			e.printStackTrace();
 		}
 		
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		
 		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
+		returnUserIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
     	startActivity(returnUserIntent);
 	}
 

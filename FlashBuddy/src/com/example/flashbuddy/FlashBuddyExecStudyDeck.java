@@ -26,12 +26,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class FlashBuddyExecStudyDeck extends Activity {
@@ -51,6 +49,7 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+				
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         
 		super.onCreate(savedInstanceState);
@@ -206,8 +205,10 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	/**
 	 * Runnable thread for updating the timer object
 	 */
-	final Runnable myUpdateNewTime = new Runnable(){
-		public void run(){
+	final Runnable myUpdateNewTime = new Runnable()
+	{
+		public void run()
+		{
 			timerView.setText(String.valueOf(timerTick));
 			
 			if( timerTick == 6 || timerTick == 5 || timerTick == 4 )
@@ -244,6 +245,12 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			this.cardTimer.cancel();
 		}
 		this.isCancelled = 1;
+		
+		Button answerButton = (Button)findViewById(R.id.AnswerButton);
+		answerButton.setBackgroundColor(Color.parseColor("#7b93af"));
+		
+		Button nextButton = (Button)findViewById(R.id.nextButton);
+		nextButton.setBackgroundColor(Color.parseColor("#4FA044"));
 	}
 	
 	/**
@@ -251,6 +258,11 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	 * @param view
 	 */
 	public void onClickNextCard( View view ){
+		Button answerButton = (Button)findViewById(R.id.AnswerButton);
+		answerButton.setBackgroundColor(Color.parseColor("#4FA044"));
+		
+		Button nextButton = (Button)findViewById(R.id.nextButton);
+		nextButton.setBackgroundColor(Color.parseColor("#7b93af"));
 		
 		if( (this.currentCardIndex+1) > (this.numCards-1)){
 			/* 
@@ -328,7 +340,12 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	 * @param view
 	 */
 	public void onClickDoneStudying( View view ){
+		// Create a new intent 
+		Intent intent = getIntent();
+		String username = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		
 		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
+		returnUserIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
     	startActivity(returnUserIntent);
 	}
 

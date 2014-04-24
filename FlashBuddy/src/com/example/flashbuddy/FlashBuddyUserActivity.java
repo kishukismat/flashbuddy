@@ -27,7 +27,9 @@ import android.view.Window;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 
 public class FlashBuddyUserActivity extends Activity {
@@ -59,19 +61,12 @@ public class FlashBuddyUserActivity extends Activity {
 		unpackAssets("Grade_One_Addition.xml");
 		unpackAssets("Grade_One_Subtraction.xml");
 		
-		// Show the Up button in the action bar.
-		//setupActionBar();
-		
 		// Create a new intent 
-		Intent intent = getIntent();	
-
+		Intent intent = getIntent();
 		// Receive the message from the parent
 		String message = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
-		 
 		// Attach the textview to an existing one in the layout
 		TextView textView = (TextView) findViewById(R.id.usernameTextview);
-		
-		//textView.setTextSize( 32 );
 		textView.setText( message );
 
 	}
@@ -130,7 +125,13 @@ public class FlashBuddyUserActivity extends Activity {
     }
     
     public void onClickStudy( View view ){
+		// Create a new intent 
+		Intent intent = getIntent();
+		// Receive the message from the parent
+		String username = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		
     	Intent showStudyIntent = new Intent( this, FlashBuddyStudyDecksActivity.class);
+    	showStudyIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
     	startActivity( showStudyIntent);
     }
 

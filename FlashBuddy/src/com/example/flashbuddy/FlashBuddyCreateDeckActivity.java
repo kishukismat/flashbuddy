@@ -61,7 +61,8 @@ public class FlashBuddyCreateDeckActivity extends Activity {
 		EditText subject = (EditText)findViewById(R.id.create_deck_subject);
 		EditText numcards = (EditText)findViewById(R.id.create_deck_numcards);
 		
-		
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
 		/* 
 		 * Open the window for the card inputs
 		 */
@@ -69,6 +70,7 @@ public class FlashBuddyCreateDeckActivity extends Activity {
 		intent.putExtra( DECK_NAME_MESSAGE, name.getText().toString() );
 		intent.putExtra( DECK_SUBJECT_MESSAGE, subject.getText().toString() );
 		intent.putExtra( DECK_NUMCARDS_MESSAGE, numcards.getText().toString() );
+		intent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
 		startActivity(intent);
 						
 		//Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );

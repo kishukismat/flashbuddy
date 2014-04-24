@@ -16,8 +16,9 @@
         android:layout_height="67dp"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/button1"
-        android:background="@drawable/rightarrow"
+        android:background="@color/bluebutton"
         android:onClick="onClickAuthUser"
+        android:text="@string/log_in"
         android:textColor="@color/white" />
 
     <Button
@@ -27,8 +28,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/password_text"
         android:layout_marginTop="76dp"
-        android:background="@drawable/leftarrow"
+        android:background="@color/bluebutton"
         android:onClick="onClickCreateUser"
+        android:text="@string/create_new_account"
         android:textColor="@color/white" />
 
     <EditText
@@ -83,28 +85,5 @@
         android:text="@string/loginscreenhelp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/gray" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignRight="@+id/password_text"
-        android:text="@string/log_in"
-        android:textColor="@color/gray"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="110dp"
-        android:layout_height="67dp"
-        android:layout_alignRight="@+id/button1"
-        android:layout_alignTop="@+id/button1"
-        android:layout_marginRight="11dp"
-        android:gravity="center"
-        android:text="@string/create_new_account"
-        android:textColor="@color/gray"
-        android:textSize="18sp" />
 
 </RelativeLayout>
