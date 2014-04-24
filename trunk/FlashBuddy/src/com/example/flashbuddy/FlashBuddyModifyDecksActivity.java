@@ -32,11 +32,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 
 public class FlashBuddyModifyDecksActivity extends Activity {
@@ -92,6 +94,15 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
 																		
 						ExpandList.collapseGroup(0);
+						
+						Button editButton = (Button)findViewById(R.id.EditDeck);
+						editButton.setBackgroundColor(Color.parseColor("#4FA044"));
+						
+						Button shareButton = (Button)findViewById(R.id.ShareDeck);
+						shareButton.setBackgroundColor(Color.parseColor("#4FA044"));
+						
+						Button deleteButton = (Button)findViewById(R.id.DeleteDeck);
+						deleteButton.setBackgroundColor(Color.parseColor("#dd514c"));
 						
 						return true;
 					}
@@ -218,7 +229,11 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 	 * @param view
 	 */
 	public void onClickNewDeck( View view ){
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		
 		Intent createDecksIntent = new Intent( this, FlashBuddyCreateDeckActivity.class );
+		createDecksIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
 		startActivity( createDecksIntent );
 	}
 	
@@ -227,8 +242,12 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 	 * @param view
 	 */
 	public void onClickEditDeck( View view ){
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		
 		Intent intent = new Intent( this, FlashBuddyEditDeckActivity.class);
 		intent.putExtra( FILE_MESSAGE, FileName );
+		intent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
 		startActivity(intent);
 	}
 	

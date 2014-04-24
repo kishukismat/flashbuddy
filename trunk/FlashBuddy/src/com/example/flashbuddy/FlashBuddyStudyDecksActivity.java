@@ -27,12 +27,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 
 public class FlashBuddyStudyDecksActivity extends Activity {
@@ -50,6 +52,7 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		//Remove title bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         
@@ -98,9 +101,13 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 						
 						ExpandList.collapseGroup(0);
 						
+						Button studyButton = (Button)findViewById(R.id.StudyDeck);
+						studyButton.setBackgroundColor(Color.parseColor("#4FA044"));
+						
 						return true;
 					}
 				});
+		
 	}
 
 	@Override
@@ -156,6 +163,11 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	public void onClickStudyDeck( View view){
 		Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
 		intent.putExtra( FILE_MESSAGE, FileName );
+		
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		intent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		
 		startActivity(intent);
 	}
 

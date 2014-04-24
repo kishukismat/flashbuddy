@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
@@ -26,6 +27,7 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -52,8 +54,40 @@ public class FlashBuddy extends Activity {
         TextView welcome=(TextView)findViewById(R.id.LogInBanner);
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/FantasticParty.ttf");
         welcome.setTypeface(typeFace);
+        
+        Button loginButton = (Button)findViewById(R.id.button2);
+        loginButton.scheduleDrawable(loginButton.getBackground(), checkInfo, 1000);
     }
 
+    final Runnable checkInfo = new Runnable()
+    {
+    	public void run()
+    	{
+	    	EditText username = (EditText)findViewById(R.id.username_text);
+	    	EditText password = (EditText)findViewById(R.id.password_text);
+	    	
+	    	String theUsername = username.getText().toString();
+			String thePassword = password.getText().toString();
+	    	
+			Button loginButton = (Button)findViewById(R.id.button2);
+			
+			if (theUsername.equals("")) 
+			{ 
+				loginButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			if (thePassword.equals("")) 
+			{ 
+				loginButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			else
+			{
+				loginButton.setBackgroundColor(Color.parseColor("#4FA044"));
+			}
+			
+			loginButton.scheduleDrawable(loginButton.getBackground(), checkInfo, 1000);
+    	}
+    };
+    
     @Override
     public boolean onTouchEvent(MotionEvent event){ 
             
