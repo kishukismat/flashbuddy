@@ -45,6 +45,8 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	TextView timerView;
 	private Timer cardTimer;
 	int timerTick;
+	int isCancelled;
+	int isTimed;
 	private final Handler cardHandler = new Handler();
 	
 	@Override
@@ -134,6 +136,8 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			/* 
 			 * create a new timer object and an associated handler
 			 */
+			this.isCancelled = 0;
+			this.isTimed = 1;
 			timerTick = this.currentCard.getTimer();
 			cardTimer = new Timer();
 			cardTimer.scheduleAtFixedRate( new TimerTask() {
@@ -145,6 +149,8 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			/* 
 			 * no timer found, set it to zero
 			 */
+			this.isCancelled = 1;
+			this.isTimed = 0;
 			timerView.setText("0");
 		}
 		
@@ -234,7 +240,10 @@ public class FlashBuddyExecStudyDeck extends Activity {
 		/*
 		 * cancel the timer 
 		 */
-		this.cardTimer.cancel();
+		if( (this.isTimed==1) && (this.isCancelled==0)){
+			this.cardTimer.cancel();
+		}
+		this.isCancelled = 1;
 	}
 	
 	/**
@@ -266,7 +275,16 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			 * reset the timer object and an associated handler
 			 */
 			timerTick = this.currentCard.getTimer();
-			cardTimer.cancel();
+			
+			/* 
+			 * logic to decide whether we need to cancel the previous timer
+			 */
+			if( (this.isTimed==1) && (this.isCancelled==0)){
+				cardTimer.cancel();
+			}
+			this.isTimed = 1;
+			this.isCancelled = 0;
+			
 			cardTimer = new Timer();
 			cardTimer.scheduleAtFixedRate( new TimerTask() {
 				@Override
@@ -277,7 +295,11 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			/* 
 			 * no timer found, set text to zero and cancel timer
 			 */
-			cardTimer.cancel();
+			if( (this.isTimed==1) && (this.isCancelled==0)){
+				cardTimer.cancel();
+			}
+			this.isTimed = 0;
+			this.isCancelled = 0;
 			timerView.setText("0");
 		}
 		
