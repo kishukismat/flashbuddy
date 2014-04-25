@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>32</numcards>
+<title>Solar System</title>
+<subject>Science</subject>
+<card>
+<id>1</id>
+<name>Question #1</name>
+<timer>11</timer>
+<question>Which planet do we live on?</question>
+<answer>Earth</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question #2</name>
+<timer>11</timer>
+<question>Which planet is the largest?</question>
+<answer>Jupiter</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question #3</name>
+<timer>11</timer>
+<question>Which planet is farthest from the Sun?</question>
+<answer>Neptune</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question #4</name>
+<timer>11</timer>
+<question>Which planet is closest to the Sun?</question>
+<answer>Mercury</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question #5</name>
+<timer>11</timer>
+<question>Which planets have rings?</question>
+<answer>Saturn and Uranus</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question #6</name>
+<timer>11</timer>
+<question>Which planet is called the evening star?</question>
+<answer>Venus</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question #7</name>
+<timer>11</timer>
+<question>A large group of stars is called what?</question>
+<answer>Galaxy</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question #8</name>
+<timer>11</timer>
+<question>What is an icy rock that has a tail?</question>
+<answer>Comet</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question #9</name>
+<timer>11</timer>
+<question>A large rock floating in space is known as what?</question>
+<answer>Asteroid</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question #10</name>
+<timer>11</timer>
+<question>A cloud made from space dust is what?</question>
+<answer>Nebula</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question #11</name>
+<timer>11</timer>
+<question>What is the second planet in the solar system?</question>
+<answer>Venus</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question #12</name>
+<timer>11</timer>
+<question>What is the third planet in the solar system?</question>
+<answer>Earth</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question #13</name>
+<timer>11</timer>
+<question>What is the fourth planet in the solar system?</question>
+<answer>Mars</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question #14</name>
+<timer>11</timer>
+<question>What is the fifth planet in the solar system?</question>
+<answer>Jupiter</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question #15</name>
+<timer>11</timer>
+<question>What is the sixth planet in the solar system?</question>
+<answer>Saturn</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question #16</name>
+<timer>11</timer>
+<question>What is the seventh planet in the solar system?</question>
+<answer>Uranus</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question #17</name>
+<timer>11</timer>
+<question>What is the eigth planet in the solar system?</question>
+<answer>Neptune</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question #18</name>
+<timer>11</timer>
+<question>Someone who studies space is known as what?</question>
+<answer>An Astronomer</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question #19</name>
+<timer>11</timer>
+<question>Someone who explores space is known as what?</question>
+<answer>An Astronaut</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question #20</name>
+<timer>11</timer>
+<question>Someone who explores space is known as what?</question>
+<answer>An Astronaut</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>11</timer>
+<question>The moon moves through distinct what?</question>
+<answer>Phases</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>11</timer>
+<question>Where are asteroid belts found?</question>
+<answer>Between inner and outer planets.</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question #22</name>
+<timer>11</timer>
+<question>How long does it take for the Earth to orbit the sun?</question>
+<answer>365 days</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question #23</name>
+<timer>11</timer>
+<question>Earth's tilt causes what?</question>
+<answer>Seasons</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question #24</name>
+<timer>11</timer>
+<question>Earth's tilt causes what?</question>
+<answer>Seasons</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question #25</name>
+<timer>11</timer>
+<question>What is the Sun?</question>
+<answer>A star</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question #26</name>
+<timer>11</timer>
+<question>Earth's tilt causes what?</question>
+<answer>Seasons</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question #27</name>
+<timer>11</timer>
+<question>The Earth rotates on its what?</question>
+<answer>Axis</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question #28</name>
+<timer>11</timer>
+<question>When the Earth's shadow blocks the moon its called what?</question>
+<answer>A Lunar Eclipse</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question #29</name>
+<timer>11</timer>
+<question>How long does it take the Earth to rotate once on its axis?</question>
+<answer>One day</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question #30</name>
+<timer>11</timer>
+<question>What is a group of stars that make up a picture?</question>
+<answer>A Constellation</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question #31</name>
+<timer>11</timer>
+<question>Any natural satellite of a planet is knowns as what?</question>
+<answer>A moon</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question #32</name>
+<timer>11</timer>
+<question>Earth's tilt causes what?</question>
+<answer>Seasons</answer>
+</card>
+</deck>
