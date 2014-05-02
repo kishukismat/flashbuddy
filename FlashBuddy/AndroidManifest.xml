@@ -4,6 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
@@ -73,6 +76,14 @@
         <activity
             android:name="com.example.flashbuddy.HelpLogin"
             android:label="@string/help_login" >
+        </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyCardInputActivity"
+            android:label="@string/title_activity_flash_buddy_card_input" >
+        </activity>
+        <activity
+            android:name="com.example.flashbuddy.FlashBuddyEditDeckActivity"
+            android:label="@string/title_activity_flash_buddy_edit_deck" >
         </activity>
     </application>
 
