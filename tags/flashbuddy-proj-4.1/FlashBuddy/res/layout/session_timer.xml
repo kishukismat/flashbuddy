@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:background="@color/flashbuddymain">
+ 
+		<TextView
+			android:id="@+id/timer"
+			android:layout_width="400dp"
+        	android:layout_height="100dp"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_alignParentBottom="true"	
+			android:layout_alignParentLeft="true"
+			android:paddingRight="10dip"
+			android:textSize="50dp" />
+ 
+		<Button
+			android:id="@+id/button"
+			android:layout_width="160dp"
+        	android:layout_height="67dp"
+			android:layout_alignParentBottom="true"	
+			android:layout_alignParentLeft="true"
+			android:text="Start" />
+		
+		<EditText
+   			 android:id="@+id/time"
+   			 android:layout_width="wrap_content"
+   			 android:layout_height="wrap_content"
+   			 android:layout_below="@+id/instruction"
+  			 android:layout_centerHorizontal="true"
+  			 android:ems="10"
+  		  	 android:imeOptions="actionGo"
+  			 android:inputType="number" />
+	 
+</RelativeLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>43</numcards>
+<title>American Constitution</title>
+<subject>History</subject>
+<card>
+<id>1</id>
+<name>Question #1</name>
+<timer>11</timer>
+<question>When was the Constitution written?</question>
+<answer>1787</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question #2</name>
+<timer>11</timer>
+<question>The men who met to write the Constitution are known as what?</question>
+<answer>The Framers</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question #3</name>
+<timer>11</timer>
+<question>In which building did the Framers meet?</question>
+<answer>Independence Hall</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question #4</name>
+<timer>11</timer>
+<question>Where is Independence Hall?</question>
+<answer>Philadelphia</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question #5</name>
+<timer>11</timer>
+<question>What was the first state to ratify the Constitution?</question>
+<answer>Delaware</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question #6</name>
+<timer>11</timer>
+<question>What was the second state to ratify the Constitution?</question>
+<answer>Pennsylvania</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question #7</name>
+<timer>11</timer>
+<question>What was the third state to ratify the Constitution?</question>
+<answer>New Jersey</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question #8</name>
+<timer>11</timer>
+<question>What was the fourth state to ratify the Constitution?</question>
+<answer>Georgia</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question #9</name>
+<timer>11</timer>
+<question>What was the fifth state to ratify the Constitution?</question>
+<answer>Connecticut</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question #10</name>
+<timer>11</timer>
+<question>What was the sixth state to ratify the Constitution?</question>
+<answer>Massachusetts</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question #11</name>
+<timer>11</timer>
+<question>What was the seventh state to ratify the Constitution?</question>
+<answer>Maryland</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question #12</name>
+<timer>11</timer>
+<question>What was the eigth state to ratify the Constitution?</question>
+<answer>South Carolina</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question #13</name>
+<timer>11</timer>
+<question>What was the ninth state to ratify the Constitution?</question>
+<answer>New Hampshire</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question #14</name>
+<timer>11</timer>
+<question>What was the tenth state to ratify the Constitution?</question>
+<answer>Virginia</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question #15</name>
+<timer>11</timer>
+<question>What was the eleventh state to ratify the Constitution?</question>
+<answer>New York</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question #16</name>
+<timer>11</timer>
+<question>What was the twelveth state to ratify the Constitution?</question>
+<answer>North Carolina</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question #17</name>
+<timer>11</timer>
+<question>What was the thirteenth state to ratify the Constitution?</question>
+<answer>Rhode Island</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question #18</name>
+<timer>11</timer>
+<question>What was the final state to ratify the Constitution?</question>
+<answer>Vermont</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question #19</name>
+<timer>11</timer>
+<question>When did Delaware ratify the Constitution?</question>
+<answer>December 7, 1787</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question #20</name>
+<timer>11</timer>
+<question>When did Pennsylvania ratify the Constitution?</question>
+<answer>December 12, 1787</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>11</timer>
+<question>When did New Jersey ratify the Constitution?</question>
+<answer>December 18, 1787</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question #22</name>
+<timer>11</timer>
+<question>When did Georgia ratify the Constitution?</question>
+<answer>January 2, 1788</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question #23</name>
+<timer>11</timer>
+<question>When did Connecticut ratify the Constitution?</question>
+<answer>January 9, 1788</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question #24</name>
+<timer>11</timer>
+<question>When did Massachutsetts ratify the Constitution?</question>
+<answer>February 6, 1788</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question #25</name>
+<timer>11</timer>
+<question>When did Maryland ratify the Constitution?</question>
+<answer>April 28, 1788</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question #26</name>
+<timer>11</timer>
+<question>When did South Carolina ratify the Constitution?</question>
+<answer>May 23, 1788</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question #27</name>
+<timer>11</timer>
+<question>When did New Hampshire ratify the Constitution?</question>
+<answer>June 21, 1788</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question #28</name>
+<timer>11</timer>
+<question>When did Virginia ratify the Constitution?</question>
+<answer>June 25, 1788</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question #29</name>
+<timer>11</timer>
+<question>When did New York ratify the Constitution?</question>
+<answer>July 26, 1788</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question #30</name>
+<timer>11</timer>
+<question>When did North Carolina ratify the Constitution?</question>
+<answer>November 21, 1789</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question #31</name>
+<timer>11</timer>
+<question>When did Rhode Island ratify the Constitution?</question>
+<answer>May 29, 1790</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question #32</name>
+<timer>11</timer>
+<question>When did Vermont ratify the Constitution?</question>
+<answer>January 10, 1791</answer>
+</card>
+<card>
+<id>33</id>
+<name>Question #33</name>
+<timer>11</timer>
+<question>How many states had to ratify the Constitution before it was established?</question>
+<answer>Nine</answer>
+</card>
+<card>
+<id>34</id>
+<name>Question #34</name>
+<timer>11</timer>
+<question>Ratify is just another word for what?</question>
+<answer>Approve</answer>
+</card>
+<card>
+<id>35</id>
+<name>Question #35</name>
+<timer>11</timer>
+<question>A change in the Constitution is known as what?</question>
+<answer>An amendment</answer>
+</card>
+<card>
+<id>36</id>
+<name>Question #36</name>
+<timer>11</timer>
+<question>How many amendments make up the Bill of Rights?</question>
+<answer>10</answer>
+</card>
+<card>
+<id>37</id>
+<name>Question #37</name>
+<timer>11</timer>
+<question>How many amendments have there been?</question>
+<answer>27</answer>
+</card>
+<card>
+<id>38</id>
+<name>Question #38</name>
+<timer>11</timer>
+<question>When was the Bill of Rights added?</question>
+<answer>1791</answer>
+</card>
+<card>
+<id>39</id>
+<name>Question #39</name>
+<timer>11</timer>
+<question>The Constitution splits the government into how many parts?</question>
+<answer>Three</answer>
+</card>
+<card>
+<id>40</id>
+<name>Question #40</name>
+<timer>11</timer>
+<question>The three parts of the government are what?</question>
+<answer>Congress, the President, and the Courts</answer>
+</card>
+<card>
+<id>41</id>
+<name>Question #41</name>
+<timer>11</timer>
+<question>Which part of the government makes the laws?</question>
+<answer>Congress</answer>
+</card>
+<card>
+<id>42</id>
+<name>Question #42</name>
+<timer>11</timer>
+<question>Which part of the government enforces the law?</question>
+<answer>The President</answer>
+</card>
+<card>
+<id>43</id>
+<name>Question #43</name>
+<timer>11</timer>
+<question>Which part decides what the law means if there are questions?</question>
+<answer>The Courts</answer>
+</card>
+</deck>

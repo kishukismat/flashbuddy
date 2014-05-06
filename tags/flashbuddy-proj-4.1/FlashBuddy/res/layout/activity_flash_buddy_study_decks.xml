@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FlashBuddyStudyDecksActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:contentDescription="paper"
+        android:src="@drawable/white_board" />
+
+    <ExpandableListView
+        android:id="@+id/StudyFileList"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:cacheColorHint="@color/gray"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:transcriptMode="alwaysScroll" >
+    </ExpandableListView>
+
+    <Button
+        android:id="@+id/StudyDeck"
+        style="@drawable/roundedbutton"
+        android:layout_width="320dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:background="@color/bluebutton"
+        android:onClick="onClickStudyDeck"
+        android:text="@string/study_deck_button"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
