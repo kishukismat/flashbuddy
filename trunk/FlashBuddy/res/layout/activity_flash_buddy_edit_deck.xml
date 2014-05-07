@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/answerEntry"
         android:layout_centerVertical="true"
-        android:text="Timer(in seconds)"
+        android:text="Timer (in seconds)"
         android:textColor="@color/gray" />
 
     <EditText
