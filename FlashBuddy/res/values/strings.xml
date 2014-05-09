@@ -69,5 +69,8 @@
     <string name="title_activity_flash_buddy_exec_study_deck">FlashBuddyExecStudyDeck</string>
     <string name="title_activity_flash_buddy_card_input">FlashBuddyCardInputActivity</string>
     <string name="title_activity_flash_buddy_edit_deck">FlashBuddyEditDeckActivity</string>
+    <string name="timer">Timer</string>
+    <color name="timerColor">#9D4384</color>
+    <string name="timerPrompt">Session Study Time (in seconds)</string>
 
 </resources>

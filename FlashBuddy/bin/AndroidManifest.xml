@@ -80,9 +80,6 @@
         <activity
             android:name="com.example.flashbuddy.FlashBuddyCardInputActivity"
             android:label="@string/title_activity_flash_buddy_card_input" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.flashbuddy.FlashBuddy" />
         </activity>
         <activity
             android:name="com.example.flashbuddy.FlashBuddyEditDeckActivity"
