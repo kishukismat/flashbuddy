@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deck>
-<numcards>14</numcards>
+<numcards>12</numcards>
 <title>Plant Biology</title>
 <subject>Science</subject>
 <card>
@@ -60,13 +60,6 @@
 <answer>Through photosynthesis</answer>
 </card>
 <card>
-<id>8</id>
-<name>Question #8</name>
-<timer>11</timer>
-<question>How do plants create food?</question>
-<answer>Through photosynthesis</answer>
-</card>
-<card>
 <id>9</id>
 <name>Question #9</name>
 <timer>11</timer>
@@ -75,34 +68,20 @@
 </card>
 <card>
 <id>10</id>
-<name>Question #10</name>
-<timer>11</timer>
-<question>How do plants create food?</question>
-<answer>Through photosynthesis</answer>
-</card>
-<card>
-<id>11</id>
 <name>Question #11</name>
 <timer>11</timer>
 <question>Chlorophyll helps plants create what?</question>
 <answer>Sugar and Oxygen</answer>
 </card>
 <card>
-<id>12</id>
-<name>Question #12</name>
-<timer>11</timer>
-<question>How do plants create food?</question>
-<answer>Through photosynthesis</answer>
-</card>
-<card>
-<id>13</id>
+<id>11</id>
 <name>Question #13</name>
 <timer>11</timer>
 <question>Plants take in carbon dioxide through thier what?</question>
 <answer>Leaves</answer>
 </card>
 <card>
-<id>14</id>
+<id>12</id>
 <name>Question #14</name>
 <timer>11</timer>
 <question>Plants take in water and minerals through their what?</question>

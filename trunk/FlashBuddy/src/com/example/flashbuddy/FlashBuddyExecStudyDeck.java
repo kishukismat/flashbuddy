@@ -197,7 +197,7 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			/*
 			 * forcible click of the "next" button
 			 */
-			Button button = (Button) findViewById(R.id.nextButton);
+			Button button = (Button) findViewById(R.id.AnswerButton);
 			button.performClick();
 		}
 	};
