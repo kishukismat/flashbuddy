@@ -124,6 +124,16 @@ public class FlashBuddyUserActivity extends Activity {
     	
     }
     
+    /**
+     * Handles the Timer button click
+     * @param view view is the current view in the application
+     */
+    public void OnClickSetTimer(View view){
+    	Intent showTimerIntent = new Intent (this, FlashBuddyTimerActivity.class);
+    	startActivity(showTimerIntent);
+    }
+    
+    
     public void onClickStudy( View view ){
 		// Create a new intent 
 		Intent intent = getIntent();
