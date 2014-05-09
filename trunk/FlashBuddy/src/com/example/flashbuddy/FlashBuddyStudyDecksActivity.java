@@ -21,6 +21,8 @@ import com.example.flashbuddy.*;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.text.method.ArrowKeyMovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,9 +46,11 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	private ExpandableListView ExpandList;
 	
 	public final static String FILE_MESSAGE = "com.example.flashbuddy.FILE";
+	public final static String GROUP_MESSAGE = "com.example.flashbuddy.GROUP";
 	
 	private int selectedFile;
 	private String FileName;
+	private int Group;
 	
 	private static final String TAG="FlashBuddyStudyDecksActivity";
 	
@@ -60,25 +64,33 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		setContentView(R.layout.activity_flash_buddy_study_decks);
 		
 		/*
-		 * list the files in our directory 
+		 * list the files in our built-in directory 
 		 */
-		String[] files = null;
+		String[] builtinFiles = null;
 		try {
-			files = this.getAssets().list("decks");
+			builtinFiles = this.getAssets().list("decks");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		/* 
+		 * list the files from the user directory
+		 */
+		String[] userFiles = null;
+		
+		userFiles = getFilesDir().list();
 		
 		
 		/* 
 		 * setup the menu
 		 */
 		ExpandList = (ExpandableListView)findViewById(R.id.StudyFileList);
-		ExpListItems = SetStandardGroups(files);
+		ExpListItems = SetStandardGroups(builtinFiles, userFiles);
 		ExpAdapter = new ExpandListAdapter(FlashBuddyStudyDecksActivity.this,ExpListItems);
 		ExpandList.setAdapter(ExpAdapter);
 		ExpandList.setChoiceMode(ExpandableListView.CHOICE_MODE_SINGLE);
 		ExpandList.setOnChildClickListener(
+
 				new ExpandableListView.OnChildClickListener() {
 			
 					
@@ -95,11 +107,14 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 						 */
 						selectedFile = index;
 						Log.i(TAG,"Retrieving child filename...");
+						Group = groupPosition;
 						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
 						
 						Log.i(TAG,"Filename is: "+FileName);
+						Log.i(TAG,"Group is:"+Integer.toString(Group));
 						
-						ExpandList.collapseGroup(0);
+						//ExpandList.collapseGroup(0);
+						ExpandList.collapseGroup(groupPosition);
 						
 						Button studyButton = (Button)findViewById(R.id.StudyDeck);
 						studyButton.setBackgroundColor(Color.parseColor("#4FA044"));
@@ -123,25 +138,29 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	 * @param files files is an array of file names
 	 * @return returns the array list items
 	 */
-	public ArrayList<ExpandListGroup> SetStandardGroups( String[] files){
+	public ArrayList<ExpandListGroup> SetStandardGroups( String[] builtinFiles, 
+														 String[] userFiles ){
 		ArrayList<ExpandListGroup> list = new ArrayList<ExpandListGroup>();
 		ArrayList<ExpandListChild> list2 = new ArrayList<ExpandListChild>(); 
-		
-		/* Add the Group */
+		ArrayList<ExpandListChild> list3 = new ArrayList<ExpandListChild>();
 		ExpandListGroup gru1 = new ExpandListGroup();
-		gru1.setName( "Decks");
+		ExpandListGroup gru2 = new ExpandListGroup();
+		
+		/* Add the group parents */
+		gru1.setName( "Built-In Decks");
+		gru2.setName( "User Decks");
 		
 		/* 
 		 * Add the children
 		 */
-		if( files.length == 0 ){
+		if( builtinFiles.length == 0 ){
 			ExpandListChild ch1 = new ExpandListChild();
 			ch1.setName("NO DECKS FOUND");
 			ch1.setTag(null);
 			ch1.setSelected(false);
 			list2.add(ch1);
 		}else{
-			for( String s : files ){
+			for( String s : builtinFiles ){
 				ExpandListChild ch1 = new ExpandListChild();
 				ch1.setName(s);
 				ch1.setTag(null);
@@ -150,8 +169,34 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 			}
 		}
 		
+		
+		/* 
+		 * Add the children
+		 */
+		if( userFiles.length == 0 ){
+			ExpandListChild ch2 = new ExpandListChild();
+			ch2.setName("NO DECKS FOUND");
+			ch2.setTag(null);
+			ch2.setSelected(false);
+			list3.add(ch2);
+		}else{
+			for( String s : userFiles ){
+				ExpandListChild ch2 = new ExpandListChild();
+				ch2.setName(s);
+				ch2.setTag(null);
+				ch2.setSelected(false);
+				list3.add(ch2);
+			}
+		}
+		
+		/* 
+		 * add the groups and their children to the parent 
+		 */
 		gru1.setItems( list2 );
+		gru2.setItems( list3 );
 		list.add(gru1);
+		list.add(gru2);
+		
 		return list;
 	}
 	
@@ -161,14 +206,32 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 	 * @param view
 	 */
 	public void onClickStudyDeck( View view){
-		Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
-		intent.putExtra( FILE_MESSAGE, FileName );
 		
-		Intent carryUsername = getIntent();
-		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
-		intent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		/*
+		 * Ensure that the filename is valid before spawning new Activity
+		 * 
+		 */
+		if( FileName == null ){
+			Log.i(TAG,"Filename has not been selected, its NULL");
+			return ;
+		}else if( FileName.length() == 0){
+			Log.i(TAG,"Filename has not been selected, length==0");
+			return ;
+		}else if( FileName == "NO DECKS FOUND"){
+			Log.i(TAG,"Filename is NO DECKS FOUND; Not a real deck");
+			return ;
+		}else{
 		
-		startActivity(intent);
+			Intent intent = new Intent( this, FlashBuddyExecStudyDeck.class);
+			intent.putExtra( FILE_MESSAGE, FileName );
+			intent.putExtra( GROUP_MESSAGE, Group );
+		
+			Intent carryUsername = getIntent();
+			String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+			intent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		
+			startActivity(intent);
+		}
 	}
 
 }
