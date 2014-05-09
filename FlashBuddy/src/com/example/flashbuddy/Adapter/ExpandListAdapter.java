@@ -19,6 +19,7 @@ import com.example.flashbuddy.ExpandListChild;
 import com.example.flashbuddy.ExpandListGroup;
 
 import android.content.Context;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,8 +107,10 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
 			view = infalInflater.inflate(R.layout.expandlist_child_item, null);
 		}
 		TextView tv = (TextView) view.findViewById(R.id.tvChild);
+		
 		tv.setText(child.getName().toString());
 		tv.setTag(child.getTag());
+
 		return view;
 	}
 	
@@ -174,6 +177,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
 		}
 		TextView tv = (TextView) view.findViewById(R.id.tvGroup);
 		tv.setText(group.getName());
+
 		return view;
 	}
 
@@ -195,6 +199,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
 	 * @return boolean
 	 * 
 	 */
+	@Override
 	public boolean isChildSelectable(int arg0, int arg1) {
 		return true;
 	}

@@ -12,6 +12,7 @@
 
 package com.example.flashbuddy;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -35,6 +36,7 @@ import android.widget.TextView;
 public class FlashBuddyExecStudyDeck extends Activity {
 
 	private String FileName;
+	private int Group;
 	private FlashBuddyDeck myDeck;
 	private List<FlashBuddyCard> cards;
 	private FlashBuddyCard currentCard;
@@ -64,32 +66,31 @@ public class FlashBuddyExecStudyDeck extends Activity {
 		 * Receive the message from the parent
 		 */
 		FileName = intent.getStringExtra(FlashBuddyStudyDecksActivity.FILE_MESSAGE);
+		Group = intent.getIntExtra(FlashBuddyStudyDecksActivity.GROUP_MESSAGE, 0);
 		
 		/* 
 		 * Validate the file then read it into a Decks object
 		 */
 		myDeck = new FlashBuddyDeck();
+		InputStream in = null;
+		
+		in = this.openDeckFile(FileName, Group);
+		
 		try {
-			InputStream in = null;
-			try {
-				in = getAssets().open("decks/"+FileName);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
 			myDeck.readDeck(in);
-			
-			try {
-				in.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		} catch (XmlPullParserException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+			
+		try {
+			in.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		
 		/*
 		 * At this point, we have all the data for the current
@@ -160,6 +161,41 @@ public class FlashBuddyExecStudyDeck extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.flash_buddy_exec_study_deck, menu);
 		return true;
+	}
+	
+	/**
+	 * Attempts to open the target filename of type "group"
+	 * @param FileName is the raw filename
+	 * @param Group is the group of calling ListView
+	 * @return
+	 */
+	private InputStream openDeckFile( String FileName, int Group ){
+		
+		if( Group == 0){
+			
+			InputStream in = null;
+			try {
+				in = getAssets().open("decks/"+FileName);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			return in;
+			
+		}else{
+			InputStream in = null;
+			
+			try {
+				in = openFileInput(FileName);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			return in;
+		}
+		
 	}
 	
 	/**
