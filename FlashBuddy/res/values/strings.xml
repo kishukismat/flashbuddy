@@ -18,7 +18,7 @@
     <string name="decksubject">Insert Deck Subject</string>
     <string name="create_deck">Create Deck</string>
     <string name="share_deck">Share Deck</string>
-    <string name="numcards">Num Cards</string>
+    <string name="numcards">Number of Cards</string>
     <string name="create_password_1">Enter a password</string>
     <string name="create_password_2">Enter it again</string>
     <string name="log_in">Log In</string>

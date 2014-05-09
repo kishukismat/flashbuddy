@@ -64,7 +64,7 @@ public class FlashBuddyCardInputActivity extends Activity {
         cardDesignator.setText("Card 1 of " + Integer.toString(deckNumCards));
         
         TextView timerView = (TextView) findViewById(R.id.timerEntry);
-        timerView.setText("11");
+        timerView.setText("0");
         
         myDeck = new FlashBuddyDeck(deckName,deckSubject);
         
