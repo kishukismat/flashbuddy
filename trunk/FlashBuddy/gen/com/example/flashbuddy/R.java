@@ -49,24 +49,25 @@ public final class R {
     }
     public static final class id {
         public static final int AnswerButton=0x7f09001c;
-        public static final int CreateDeck=0x7f090021;
+        public static final int CreateDeck=0x7f090022;
         public static final int CreateDeckBanner=0x7f09000f;
         public static final int CreateUserBanner=0x7f090017;
-        public static final int DeleteDeck=0x7f090020;
-        public static final int EditDeck=0x7f090022;
+        public static final int DeleteDeck=0x7f090021;
+        public static final int EditDeck=0x7f090023;
         public static final int LogInBanner=0x7f090004;
-        public static final int Logout=0x7f090025;
-        public static final int ModifyFileList=0x7f09001e;
-        public static final int ShareDeck=0x7f09001f;
-        public static final int StartStudying=0x7f090028;
-        public static final int StudyDeck=0x7f090024;
-        public static final int StudyFileList=0x7f090023;
-        public static final int Timer=0x7f09002a;
-        public static final int ViewDecks=0x7f090029;
-        public static final int action_settings=0x7f09002d;
+        public static final int Logout=0x7f090026;
+        public static final int ModifyFileList=0x7f09001f;
+        public static final int ShareDeck=0x7f090020;
+        public static final int StartStudying=0x7f090029;
+        public static final int StudyDeck=0x7f090025;
+        public static final int StudyFileList=0x7f090024;
+        public static final int Timer=0x7f09002b;
+        public static final int ViewDecks=0x7f09002a;
+        public static final int action_settings=0x7f09002f;
         public static final int answerEntry=0x7f09000a;
         public static final int answerText=0x7f09001b;
         public static final int answerView=0x7f090009;
+        public static final int blankButton=0x7f09001e;
         public static final int button1=0x7f090001;
         public static final int button2=0x7f090000;
         public static final int cardDesignator=0x7f090006;
@@ -78,7 +79,7 @@ public final class R {
         public static final int create_password_text_2=0x7f090014;
         public static final int create_user_button=0x7f090016;
         public static final int create_username_text=0x7f090018;
-        public static final int current_user=0x7f090026;
+        public static final int current_user=0x7f090027;
         public static final int doneButton=0x7f09000e;
         public static final int imageView1=0x7f090019;
         public static final int nextButton=0x7f09000d;
@@ -88,11 +89,12 @@ public final class R {
         public static final int questionView=0x7f090007;
         public static final int textView1=0x7f090005;
         public static final int timerEntry=0x7f09000c;
+        public static final int timerEntry2=0x7f09002e;
         public static final int timerText=0x7f09001d;
         public static final int timerView=0x7f09000b;
-        public static final int tvChild=0x7f09002b;
-        public static final int tvGroup=0x7f09002c;
-        public static final int usernameTextview=0x7f090027;
+        public static final int tvChild=0x7f09002c;
+        public static final int tvGroup=0x7f09002d;
+        public static final int usernameTextview=0x7f090028;
         public static final int username_text=0x7f090003;
     }
     public static final class layout {
@@ -153,11 +155,13 @@ public final class R {
         public static final int main_start_studying=0x7f05001f;
         public static final int main_trueUsername=0x7f050024;
         public static final int main_view_decks=0x7f050020;
+        public static final int minTimer=0x7f050034;
         public static final int newusername=0x7f050009;
         public static final int next_button_text=0x7f050001;
         public static final int numcards=0x7f050011;
         public static final int password=0x7f05000a;
         public static final int question_title_text=0x7f050003;
+        public static final int secTimer=0x7f050035;
         public static final int share_deck=0x7f050010;
         public static final int share_flash_decks=0x7f050018;
         public static final int show_answer_text=0x7f050005;
@@ -172,6 +176,7 @@ public final class R {
         public static final int title_activity_flash_buddy_exec_study_deck=0x7f05002f;
         public static final int title_activity_flash_buddy_modify_decks=0x7f050028;
         public static final int title_activity_flash_buddy_study_decks=0x7f05001e;
+        public static final int title_activity_flash_buddy_timer=0x7f050036;
         public static final int title_activity_flash_buddy_user=0x7f05001c;
         public static final int title_activity_xmlparse=0x7f05002c;
         public static final int username=0x7f050008;
