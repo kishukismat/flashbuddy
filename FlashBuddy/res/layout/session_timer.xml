@@ -10,34 +10,53 @@
     tools:context=".FlashBuddyEditDeckActivity" >
 
     <EditText
-        android:id="@+id/timerEntry"
+        android:id="@+id/timerEntry2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timerView"
-        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/timerEntry"
+        android:layout_below="@+id/timerEntry"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
         android:ems="10"
+        android:hint="@string/secTimer"
         android:inputType="textMultiLine"
-        android:textColor="@color/gray" />
+        android:textColor="@color/gray" >
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/timerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="136dp"
+        android:layout_alignRight="@+id/doneButton"
+        android:layout_marginTop="90dp"
         android:text="@string/timerPrompt"
+        android:textColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/timerEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/minTimer"
+        android:inputType="textMultiLine"
         android:textColor="@color/gray" />
 
     <Button
         android:id="@+id/doneButton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timerEntry"
+        android:layout_below="@+id/timerEntry2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="17dp"
         android:background="@color/green"
-        android:onClick="onClickWriteCard"
+        android:onClick="onClickSaveTimer"
         android:text="Save "
         android:textColor="@color/gray" />
 

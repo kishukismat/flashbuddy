@@ -250,7 +250,7 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			if( timerTick == 6 || timerTick == 5 || timerTick == 4 )
 			{
 				// Text color should be yellow
-				timerView.setTextColor(Color.parseColor("#CCFF66"));
+				timerView.setTextColor(Color.parseColor("#FF9900"));
 			}
 			else if( timerTick == 3 || timerTick == 2 || timerTick == 1 )
 			{
