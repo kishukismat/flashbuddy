@@ -27,6 +27,7 @@
         android:scrollbars="vertical"
         android:textAlignment="center"
         android:transcriptMode="alwaysScroll" >
+
     </ExpandableListView>
 
     <Button
