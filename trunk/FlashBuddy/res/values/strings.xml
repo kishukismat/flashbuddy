@@ -75,5 +75,7 @@
     <string name="minTimer">Minutes</string>
     <string name="secTimer">Seconds</string>
     <string name="title_activity_flash_buddy_timer">FlashBuddyTimerActivity</string>
+    <string name="TimerText">Study Timer</string>
+    <string name="StudyTimer">0</string>
 
 </resources>

@@ -40,34 +40,37 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int leftarrow=0x7f020001;
-        public static final int paper=0x7f020002;
-        public static final int rightarrow=0x7f020003;
-        public static final int roundedbutton=0x7f020004;
-        public static final int white_board=0x7f020005;
+        public static final int alarmclock=0x7f020000;
+        public static final int alarmgreen=0x7f020001;
+        public static final int alarmred=0x7f020002;
+        public static final int alarmyellow=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int leftarrow=0x7f020005;
+        public static final int paper=0x7f020006;
+        public static final int rightarrow=0x7f020007;
+        public static final int roundedbutton=0x7f020008;
+        public static final int white_board=0x7f020009;
     }
     public static final class id {
         public static final int AnswerButton=0x7f09001c;
-        public static final int CreateDeck=0x7f090022;
+        public static final int CreateDeck=0x7f090021;
         public static final int CreateDeckBanner=0x7f09000f;
         public static final int CreateUserBanner=0x7f090017;
-        public static final int DeleteDeck=0x7f090021;
-        public static final int EditDeck=0x7f090023;
+        public static final int DeleteDeck=0x7f090020;
+        public static final int EditDeck=0x7f090022;
         public static final int LogInBanner=0x7f090004;
         public static final int Logout=0x7f090026;
-        public static final int ModifyFileList=0x7f09001f;
-        public static final int ShareDeck=0x7f090020;
-        public static final int StartStudying=0x7f090029;
+        public static final int ModifyFileList=0x7f09001e;
+        public static final int ShareDeck=0x7f09001f;
+        public static final int StartStudying=0x7f09002a;
         public static final int StudyDeck=0x7f090025;
-        public static final int StudyFileList=0x7f090024;
-        public static final int Timer=0x7f09002b;
-        public static final int ViewDecks=0x7f09002a;
-        public static final int action_settings=0x7f09002f;
+        public static final int StudyFileList=0x7f090023;
+        public static final int Timer=0x7f090024;
+        public static final int ViewDecks=0x7f090029;
+        public static final int action_settings=0x7f09002e;
         public static final int answerEntry=0x7f09000a;
         public static final int answerText=0x7f09001b;
         public static final int answerView=0x7f090009;
-        public static final int blankButton=0x7f09001e;
         public static final int button1=0x7f090001;
         public static final int button2=0x7f090000;
         public static final int cardDesignator=0x7f090006;
@@ -87,13 +90,13 @@ public final class R {
         public static final int questionEntry=0x7f090008;
         public static final int questionText=0x7f09001a;
         public static final int questionView=0x7f090007;
-        public static final int textView1=0x7f090005;
         public static final int timerEntry=0x7f09000c;
-        public static final int timerEntry2=0x7f09002e;
+        public static final int timerEntry2=0x7f09002d;
         public static final int timerText=0x7f09001d;
         public static final int timerView=0x7f09000b;
-        public static final int tvChild=0x7f09002c;
-        public static final int tvGroup=0x7f09002d;
+        public static final int totalStudyTime=0x7f090005;
+        public static final int tvChild=0x7f09002b;
+        public static final int tvGroup=0x7f09002c;
         public static final int usernameTextview=0x7f090028;
         public static final int username_text=0x7f090003;
     }
@@ -127,6 +130,8 @@ public final class R {
         public static final int flash_buddy_user=0x7f080009;
     }
     public static final class string {
+        public static final int StudyTimer=0x7f050038;
+        public static final int TimerText=0x7f050037;
         public static final int action_settings=0x7f050006;
         public static final int answer_title_text=0x7f050004;
         public static final int app_name=0x7f050000;

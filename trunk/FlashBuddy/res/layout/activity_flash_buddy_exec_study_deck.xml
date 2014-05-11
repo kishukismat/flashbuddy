@@ -95,28 +95,16 @@
         android:onClick="onClickNextCard"
         android:text="@string/next_button_text"
         android:textColor="@color/white" />
-    
-    <Button 
-        android:id="@+id/blankButton"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/AnswerButton"
-        
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:gravity="center|center_horizontal"
-        android:textColor="@color/white"
-        android:textSize="28sp" />
 
     <EditText
         android:id="@+id/timerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/blankButton"
-        android:layout_alignLeft="@+id/imageView1"
-        android:background="@null"
+        style="@drawable/alarmclock"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/AnswerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/alarmclock"
         android:cursorVisible="false"
         android:ems="10"
         android:gravity="center|center_horizontal"

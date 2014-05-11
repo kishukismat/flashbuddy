@@ -24,8 +24,12 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class FlashBuddyEditDeckActivity extends Activity {
@@ -38,6 +42,10 @@ public class FlashBuddyEditDeckActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flash_buddy_edit_deck);
 		
@@ -98,9 +106,40 @@ public class FlashBuddyEditDeckActivity extends Activity {
 		answerTextView.setText(currentCard.getAnswer());
 		timerTextView.setText(Integer.toString(currentCard.getTimer()));
 		cardDesignator.setText("Card 1 of "+Integer.toString(editDeck.getNumCards()));
+		
+		Button NextButton = (Button)findViewById(R.id.nextButton);
+		NextButton.scheduleDrawable(NextButton.getBackground(), checkInfo, 1000);
         
 	}
 
+	final Runnable checkInfo = new Runnable()
+    {
+    	public void run()
+    	{
+    		TextView questionTextView = (TextView) findViewById(R.id.questionEntry);
+    		TextView answerTextView = (TextView) findViewById(R.id.answerEntry);
+    		TextView timerTextView = (TextView) findViewById(R.id.timerEntry);
+	    	
+    		String localQuestion = questionTextView.getText().toString();
+    		String localAnswer = answerTextView.getText().toString();
+    		String localTimer = timerTextView.getText().toString();
+	    	
+    		Button NextButton = (Button)findViewById(R.id.nextButton);
+			
+			if (localQuestion.equals("") || localAnswer.equals("") || localTimer.equals("")) 
+			{ 
+				NextButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			else
+			{
+				NextButton.setBackgroundColor(Color.parseColor("#4FA044"));
+			}
+			
+			NextButton.scheduleDrawable(NextButton.getBackground(), checkInfo, 1000);
+			}
+    };
+    
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -236,6 +275,11 @@ public class FlashBuddyEditDeckActivity extends Activity {
 		 * done writing changes; return to ModifyDeckActivity
 		 */
 		Intent returnUserIntent = new Intent( this, FlashBuddyModifyDecksActivity.class );
+		
+		Intent intent = getIntent();
+    	String username = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+    	returnUserIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		
     	startActivity(returnUserIntent);
 	}
 	

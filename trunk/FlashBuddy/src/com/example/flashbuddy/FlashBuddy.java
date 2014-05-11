@@ -15,7 +15,9 @@ package com.example.flashbuddy;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -173,7 +175,6 @@ public class FlashBuddy extends Activity {
     	if( success == true ){
     		Log.i(TAG, "Authentication success");
     		
-    		//if(sharedpreferences.contains(enteredUsername))
     		if(enteredUsername.equals(sharedpreferences.getString(Username,"")))
     		{
     			truePassword = sharedpreferences.getString(Password, "");
@@ -184,27 +185,62 @@ public class FlashBuddy extends Activity {
     			}
     			else
     			{
-    				Log.i(TAG, "Authentication failure");
-    	    		Intent failedIntent = new Intent( this, FlashBuddyDisplayedMessageActivity.class );
-    	        	String failedMessage = "Authentication Failed!  Please return and try again.";
-    	        	failedIntent.putExtra( AUTH_MESSAGE, failedMessage);
-    	        	startActivity(failedIntent);
+    				// Incorrect Password
+    	        	
+    	        	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK);
+
+                    dlgAlert.setMessage("Incorrect Password!  Try Again.");
+                    dlgAlert.setTitle("Authentication Error");
+                    dlgAlert.setPositiveButton("OK", null);
+                    dlgAlert.setCancelable(true);
+                    dlgAlert.create().show();
+
+                    dlgAlert.setPositiveButton("Ok", new DialogInterface.OnClickListener() 
+                    {
+                            public void onClick(DialogInterface dialog, int which) 
+                            {
+                            }
+                    });
     			}
     		}	
     		else
 			{
-				Log.i(TAG, "Authentication failure");
-	    		Intent failedIntent = new Intent( this, FlashBuddyDisplayedMessageActivity.class );
-	        	String failedMessage = "User not found!  Please return and try again.";
-	        	failedIntent.putExtra( AUTH_MESSAGE, failedMessage);
-	        	startActivity(failedIntent);
+    			// Incorrect Username
+				// Incorrect Password
+	        	
+	        	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK);
+
+                dlgAlert.setMessage("Incorrect Username!  Try Again.");
+                dlgAlert.setTitle("Authentication Error");
+                dlgAlert.setPositiveButton("OK", null);
+                dlgAlert.setCancelable(true);
+                dlgAlert.create().show();
+
+                dlgAlert.setPositiveButton("Ok", new DialogInterface.OnClickListener() 
+                {
+                        public void onClick(DialogInterface dialog, int which) 
+                        {
+                        }
+                });
 			}
     	}else{
-    		Log.i(TAG, "Authentication failure");
-    		Intent failedIntent = new Intent( this, FlashBuddyDisplayedMessageActivity.class );
-        	String failedMessage = "No characters found!  Please enter your login information and try again.";
-        	failedIntent.putExtra( AUTH_MESSAGE, failedMessage);
-        	startActivity(failedIntent);
+    		// No information entered
+			// Incorrect Password
+        	
+        	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK);
+
+            dlgAlert.setMessage("No Information Entered!  Try Again.");
+            dlgAlert.setTitle("Authentication Error");
+            dlgAlert.setPositiveButton("OK", null);
+            dlgAlert.setCancelable(true);
+            dlgAlert.create().show();
+
+            dlgAlert.setPositiveButton("Ok", new DialogInterface.OnClickListener() 
+            {
+                    public void onClick(DialogInterface dialog, int which) 
+                    {
+                    }
+            });
     	}
     	
     	return true;

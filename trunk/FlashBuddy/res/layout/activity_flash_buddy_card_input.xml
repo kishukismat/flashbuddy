@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:inputType="none"
         android:textColor="@color/gray"
@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cardDesignator"
-        android:layout_alignRight="@+id/cardDesignator"
         android:layout_below="@+id/cardDesignator"
         android:layout_marginTop="20dp"
         android:text="@string/question_title_text"
@@ -38,11 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/questionView"
         android:layout_below="@+id/questionView"
-        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:textColor="@color/gray" >
 
+        <requestFocus />
     </EditText>
 
     <TextView
@@ -51,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/questionEntry"
         android:layout_below="@+id/questionEntry"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="20dp"
         android:text="@string/answer_title_text"
         android:textColor="@color/gray" />
 
@@ -71,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/answerEntry"
         android:layout_below="@+id/answerEntry"
+        android:layout_marginTop="21dp"
         android:text="Timer(in seconds)"
         android:textColor="@color/gray" />
 
@@ -82,30 +82,27 @@
         android:layout_below="@+id/timerView"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:textColor="@color/gray" >
-
-    </EditText>
+        android:textColor="@color/gray" />
 
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="130dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/doneButton"
-        android:layout_alignBottom="@+id/doneButton"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/rightarrow"
+        android:layout_above="@+id/doneButton"
+        android:layout_alignLeft="@+id/doneButton"
+        android:layout_marginBottom="21dp"
+        android:background="@color/bluebutton"
         android:onClick="onClickNextCard"
         android:text="@string/next_button_text"
         android:textColor="@color/gray" />
 
     <Button
         android:id="@+id/doneButton"
-        android:layout_width="130dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/timerView"
-        android:layout_below="@+id/timerEntry"
-        android:layout_marginRight="17dp"
-        android:layout_marginTop="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
         android:background="@color/green"
         android:onClick="onClickWriteCard"
         android:text="@string/create_deck"

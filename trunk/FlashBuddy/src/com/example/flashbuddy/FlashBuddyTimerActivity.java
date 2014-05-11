@@ -31,10 +31,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+
 public class FlashBuddyTimerActivity extends Activity {
 	
 	TextView timerView;
 	private Timer sessionTimer;
+	private static int totalSec;
 	int theMinutes;
 	int theSeconds;
 	int timerTick;
@@ -51,29 +53,44 @@ public class FlashBuddyTimerActivity extends Activity {
 		
 	}
 	
+	public static int getTotalTimer()
+	{
+		return totalSec;
+	}
+	
 	//Set the attributes for the session timer.
-	public void setTimer(int theMinTime, int theSecTime){
+	public void setTotalTimer(int theMinTime, int theSecTime){
 		this.theMinutes = theMinTime;
 		this.theSeconds = theSecTime;
+		int minToSec = theMinTime * 60;
+		totalSec = minToSec+theSeconds;
 	}
 	
 	//When the Save button is clicked the values of the text boxes should be saved as the timer.
 	public void onClickSaveTimer(View view){
 		
 		//Minute value
-		TextView timerTextView1 = (TextView) findViewById(R.id.timerEntry);
+		EditText timerTextView1 = (EditText) findViewById(R.id.timerEntry);
 		//Second Value
-		TextView timerTextView2 = (TextView) findViewById(R.id.timerEntry2);
+		EditText timerTextView2 = (EditText) findViewById(R.id.timerEntry2);
+		
+		if (timerTextView1.getText().toString() == "")
+		{
+			timerTextView1.setText("0");
+		}
+		if (timerTextView2.getText().toString() == "")
+		{
+			timerTextView2.setText("0");
+		}
 		
 		//Parse the two string values to ints.
 		int localTimerMin = Integer.parseInt(timerTextView1.getText().toString());
 		int localTimerSec = Integer.parseInt(timerTextView2.getText().toString());
-		
-		
-		this.setTimer(localTimerMin, localTimerSec);
+
+		this.setTotalTimer(localTimerMin, localTimerSec);
 		
 		//Return to user activity screen.
-		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
+		Intent returnUserIntent = new Intent( this, FlashBuddyStudyDecksActivity.class );
     	startActivity(returnUserIntent);
 		
 	}

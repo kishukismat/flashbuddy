@@ -43,42 +43,28 @@
         android:textColor="@color/gray" />
 
     <Button
-        android:id="@+id/StartStudying"
-        style="@drawable/roundedbutton"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/green"
-        android:onClick="onClickStudy"
-        android:text="@string/main_start_studying"
-        android:textColor="@color/white" />
-
-    <Button
         android:id="@+id/ViewDecks"
         style="@drawable/roundedbutton"
         android:layout_width="500dp"
         android:layout_height="100dp"
         android:layout_alignLeft="@+id/StartStudying"
-        android:layout_below="@+id/StartStudying"
+        android:layout_centerVertical="true"
         android:background="@color/bluebutton"
         android:onClick="onClickShowDecks"
         android:text="@string/main_view_decks"
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/Timer"
+        android:id="@+id/StartStudying"
         style="@drawable/roundedbutton"
         android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_above="@+id/current_user"
-        android:layout_alignLeft="@+id/ViewDecks"
-        android:layout_alignRight="@+id/ViewDecks"
-        android:layout_below="@+id/ViewDecks"
-        android:text="@string/timer"
-       	android:layout_centerHorizontal="true"
-        android:background="@color/timerColor"
-        android:onClick="onClickSetTimer"
+        android:layout_above="@+id/ViewDecks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@color/green"
+        android:onClick="onClickStudy"
+        android:text="@string/main_start_studying"
         android:textColor="@color/white" />
 
 </RelativeLayout>

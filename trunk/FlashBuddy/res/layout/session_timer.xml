@@ -10,42 +10,40 @@
     tools:context=".FlashBuddyEditDeckActivity" >
 
     <EditText
+        android:id="@+id/timerEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/minTimer"
+        android:inputType="textMultiLine"
+        android:textColor="@color/gray" />
+
+    <EditText
         android:id="@+id/timerEntry2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/timerEntry"
         android:layout_below="@+id/timerEntry"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
+        android:layout_marginTop="17dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/secTimer"
         android:inputType="textMultiLine"
-        android:textColor="@color/gray" >
-
-        <requestFocus />
-    </EditText>
+        android:textColor="@color/gray" />
 
     <TextView
         android:id="@+id/timerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/doneButton"
-        android:layout_marginTop="90dp"
-        android:text="@string/timerPrompt"
-        android:textColor="@color/gray" />
-
-    <EditText
-        android:id="@+id/timerEntry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timerView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/minTimer"
-        android:inputType="textMultiLine"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/timerPrompt"
         android:textColor="@color/gray" />
 
     <Button
@@ -54,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/timerEntry2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="64dp"
         android:background="@color/green"
         android:onClick="onClickSaveTimer"
         android:text="Save "
