@@ -21,10 +21,12 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class FlashBuddyCardInputActivity extends Activity {
@@ -73,7 +75,37 @@ public class FlashBuddyCardInputActivity extends Activity {
          * and insert new cards.  this is done using the onClickNextCard member function
          */
         
+        Button NextButton = (Button)findViewById(R.id.nextButton);
+		NextButton.scheduleDrawable(NextButton.getBackground(), checkInfo, 1000);
+        
 	}
+	
+	final Runnable checkInfo = new Runnable()
+    {
+    	public void run()
+    	{
+    		TextView questionTextView = (TextView) findViewById(R.id.questionEntry);
+    		TextView answerTextView = (TextView) findViewById(R.id.answerEntry);
+    		TextView timerTextView = (TextView) findViewById(R.id.timerEntry);
+	    	
+    		String localQuestion = questionTextView.getText().toString();
+    		String localAnswer = answerTextView.getText().toString();
+    		String localTimer = timerTextView.getText().toString();
+	    	
+    		Button NextButton = (Button)findViewById(R.id.nextButton);
+			
+			if (localQuestion.equals("") || localAnswer.equals("") || localTimer.equals("")) 
+			{ 
+				NextButton.setBackgroundColor(Color.parseColor("#7b93af"));
+			}
+			else
+			{
+				NextButton.setBackgroundColor(Color.parseColor("#4FA044"));
+			}
+			
+			NextButton.scheduleDrawable(NextButton.getBackground(), checkInfo, 1000);
+			}
+    };
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -148,8 +180,8 @@ public class FlashBuddyCardInputActivity extends Activity {
 			
 			this.currentCardIndex++;
 			timerTextView.setText("11");
-			answerTextView.setText(" ");
-			questionTextView.setText(" ");
+			answerTextView.setText("");
+			questionTextView.setText("");
 		}
 		
 		cardDesignator.setText("Card " + Integer.toString(this.currentCardIndex) 

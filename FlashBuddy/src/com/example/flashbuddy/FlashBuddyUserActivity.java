@@ -120,6 +120,11 @@ public class FlashBuddyUserActivity extends Activity {
      */
     public void onClickShowDecks( View view ){
     	Intent showDecksIntent = new Intent( this, FlashBuddyModifyDecksActivity.class );
+    	
+    	Intent intent = getIntent();
+    	String username = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+    	showDecksIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+    	
     	startActivity( showDecksIntent );
     	
     }

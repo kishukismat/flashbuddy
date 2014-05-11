@@ -31,6 +31,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class FlashBuddyExecStudyDeck extends Activity {
@@ -153,6 +154,33 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			this.isTimed = 0;
 			timerView.setText("0");
 		}
+		/*
+		// Check for global study timer
+		int totalStudySession = FlashBuddyTimerActivity.getTotalTimer();
+		TextView totalStudyTimer = (TextView) findViewById(R.id.totalStudyTime);
+		totalStudyTimer.setText(totalStudySession);
+		
+		if( totalStudySession > 0 ){
+			
+			
+			// create a new timer object and an associated handler
+			this.isCancelled = 0;
+			this.isTimed = 1;
+			timerTick = this.currentCard.getTimer();
+			cardTimer = new Timer();
+			cardTimer.scheduleAtFixedRate( new TimerTask() {
+				@Override
+		         public void run() {UpdateGUI();}
+			}, 1000, 1000);
+			
+		}else{ 
+			
+			// no timer found, set it to zero
+			this.isCancelled = 1;
+			this.isTimed = 0;
+			timerView.setText("0");
+		}
+		*/
 		
 	}
 
@@ -251,17 +279,20 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			{
 				// Text color should be yellow
 				timerView.setTextColor(Color.parseColor("#FF9900"));
+				timerView.setBackgroundResource(0x7f020003);
 			}
 			else if( timerTick == 3 || timerTick == 2 || timerTick == 1 )
 			{
 				// Text color should be red
 				timerView.setTextColor(Color.parseColor("#DD514C"));
+				timerView.setBackgroundResource(0x7f020002);
 			}
 			else
 			{
 				// Text color should be green
 				timerView.setTextColor(Color.parseColor("#4FA044"));
 				timerView.setTypeface(null,Typeface.BOLD);
+				timerView.setBackgroundResource(0x7f020001);
 			}
 		}
 	};
@@ -333,6 +364,7 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			this.isTimed = 1;
 			this.isCancelled = 0;
 			
+			UpdateGUI();
 			cardTimer = new Timer();
 			cardTimer.scheduleAtFixedRate( new TimerTask() {
 				@Override

@@ -108,6 +108,9 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 						selectedFile = index;
 						Log.i(TAG,"Retrieving child filename...");
 						Group = groupPosition;
+						//String NoXMLFileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
+						//String XMLFileName = NoXMLFileName + ".xml";
+						//FileName = XMLFileName;
 						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
 						
 						Log.i(TAG,"Filename is: "+FileName);
@@ -162,6 +165,9 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		}else{
 			for( String s : builtinFiles ){
 				ExpandListChild ch1 = new ExpandListChild();
+				//String XMLString = ch1.getName();
+				//String noXMLString = XMLString.replaceAll(".xml","");
+				//ch1.setName(noXMLString);
 				ch1.setName(s);
 				ch1.setTag(null);
 				ch1.setSelected(false);
@@ -199,6 +205,13 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		
 		return list;
 	}
+	
+
+    // Handles the Timer button click
+    public void onClickTimer(View view){
+    	Intent showTimerIntent = new Intent (this, FlashBuddyTimerActivity.class);
+    	startActivity(showTimerIntent);
+    }
 	
 	/**
 	 * onClickStudyDeck : starts the target deck in a study session

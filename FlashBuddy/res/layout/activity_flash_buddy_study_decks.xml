@@ -13,19 +13,16 @@
         android:id="@+id/imageView1"
         android:layout_width="320dp"
         android:layout_height="320dp"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:contentDescription="paper"
+        android:contentDescription="@string/whiteboard"
         android:src="@drawable/white_board" />
 
     <ExpandableListView
         android:id="@+id/StudyFileList"
         android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:layout_alignBottom="@+id/imageView1"
+        android:layout_height="260dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="25dp"
         android:cacheColorHint="@color/gray"
         android:scrollbars="vertical"
         android:textAlignment="center"
@@ -33,13 +30,26 @@
     </ExpandableListView>
 
     <Button
+        android:id="@+id/Timer"
+        style="@drawable/roundedbutton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:background="@color/green"
+        android:onClick="onClickTimer"
+        android:text="@string/TimerText"
+        android:textColor="@color/white" />
+
+    <Button
         android:id="@+id/StudyDeck"
         style="@drawable/roundedbutton"
         android:layout_width="320dp"
-        android:layout_height="90dp"
-        android:layout_below="@+id/imageView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/Timer"
+        android:layout_alignLeft="@+id/Timer"
+        android:layout_marginBottom="14dp"
         android:background="@color/bluebutton"
         android:onClick="onClickStudyDeck"
         android:text="@string/study_deck_button"

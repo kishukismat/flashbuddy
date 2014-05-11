@@ -23,7 +23,7 @@
         android:textSize="80sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/totalStudyTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LogInBanner"

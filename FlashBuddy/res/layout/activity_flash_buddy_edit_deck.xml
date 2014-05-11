@@ -13,21 +13,19 @@
         android:id="@+id/cardDesignator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionEntry"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="none"
         android:textColor="@color/gray"
-        android:textColorHint="@color/gray" >
-
-        <requestFocus />
-    </EditText>
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/questionView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cardDesignator"
+        android:layout_alignLeft="@+id/questionEntry"
         android:layout_below="@+id/cardDesignator"
         android:layout_marginTop="22dp"
         android:text="@string/question_title_text"
@@ -37,19 +35,22 @@
         android:id="@+id/questionEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/answerEntry"
         android:layout_below="@+id/questionView"
-        android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:textColor="@color/gray" />
+        android:textColor="@color/gray" >
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/answerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/questionEntry"
+        android:layout_alignLeft="@+id/answerEntry"
         android:layout_below="@+id/questionEntry"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:text="@string/answer_title_text"
         android:textColor="@color/gray" />
 
@@ -57,8 +58,8 @@
         android:id="@+id/answerEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timerEntry"
         android:layout_below="@+id/answerView"
-        android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textMultiLine"
         android:textColor="@color/gray" />
@@ -67,7 +68,7 @@
         android:id="@+id/timerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/answerEntry"
+        android:layout_alignLeft="@+id/timerEntry"
         android:layout_centerVertical="true"
         android:text="Timer (in seconds)"
         android:textColor="@color/gray" />
@@ -99,10 +100,10 @@
         android:id="@+id/nextButton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/timerEntry"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/rightarrow"
+        android:layout_marginTop="62dp"
+        android:layout_toRightOf="@+id/doneButton"
+        android:background="@color/bluebutton"
         android:onClick="onClickNextCard"
         android:text="@string/next_button_text"
         android:textColor="@color/gray" />
