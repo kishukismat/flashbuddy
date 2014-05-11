@@ -112,6 +112,17 @@
         android:textColor="@color/white"
         android:textSize="28sp" />
 
+    <TextView
+        android:id="@+id/totalStudyTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Black" />
+
         />
 
 </RelativeLayout>
