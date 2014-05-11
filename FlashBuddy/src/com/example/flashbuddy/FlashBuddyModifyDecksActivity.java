@@ -34,6 +34,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -104,6 +105,11 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 						
 						Button deleteButton = (Button)findViewById(R.id.DeleteDeck);
 						deleteButton.setBackgroundColor(Color.parseColor("#dd514c"));
+						
+						TextView selectedDeck = (TextView) findViewById(R.id.currentSelection2);
+						String cleanName = FileName.replaceAll("_"," ");
+						cleanName = cleanName.replaceAll(".xml","");
+						selectedDeck.setText(cleanName);
 						
 						return true;
 					}

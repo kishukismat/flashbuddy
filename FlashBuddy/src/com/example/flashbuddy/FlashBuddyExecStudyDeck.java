@@ -22,8 +22,13 @@ import java.util.TimerTask;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -154,36 +159,58 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			this.isTimed = 0;
 			timerView.setText("0");
 		}
-		/*
-		// Check for global study timer
-		int totalStudySession = FlashBuddyTimerActivity.getTotalTimer();
-		TextView totalStudyTimer = (TextView) findViewById(R.id.totalStudyTime);
-		totalStudyTimer.setText(totalStudySession);
+
+		int theTime = FlashBuddyTimerActivity.getTotalTimer();
+		final TextView totalStudyTime = (TextView) findViewById(R.id.totalStudyTimer);
+		if (theTime != 0)
+		{
+			new CountDownTimer(theTime*1000, 1000) {
+	
+				     public void onTick(long millisUntilFinished) {
+				    	 
+				    	 int seconds=(int) ((millisUntilFinished/1000)%60);
+				    	 long minutes=((millisUntilFinished-seconds)/1000)/60;
+				    	 
+				    	 int doubleSeconds=Integer.parseInt(Integer.toString(seconds));  
+				    	 java.text.DecimalFormat nft = new  
+				    	 java.text.DecimalFormat("#00.###");  
+				    	 nft.setDecimalSeparatorAlwaysShown(false);  
+				    	 
+				    	 totalStudyTime.setText("Time Remaining: " + minutes + ":" + nft.format(doubleSeconds));    	
+				     }
 		
-		if( totalStudySession > 0 ){
-			
-			
-			// create a new timer object and an associated handler
-			this.isCancelled = 0;
-			this.isTimed = 1;
-			timerTick = this.currentCard.getTimer();
-			cardTimer = new Timer();
-			cardTimer.scheduleAtFixedRate( new TimerTask() {
-				@Override
-		         public void run() {UpdateGUI();}
-			}, 1000, 1000);
-			
-		}else{ 
-			
-			// no timer found, set it to zero
-			this.isCancelled = 1;
-			this.isTimed = 0;
-			timerView.setText("0");
+				     public void onFinish() {
+				         totalStudyTime.setText("");
+				         timerIsUp();
+				     }
+			}.start();
 		}
-		*/
 		
 	}
 
+	@SuppressLint("NewApi")
+	public void timerIsUp()
+	{
+		AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this, AlertDialog.THEME_HOLO_DARK);
+		
+        dlgAlert.setMessage("Time is Up!");
+        dlgAlert.setTitle("Study Session Complete");
+        dlgAlert.setPositiveButton("Continue", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
+        
+        final Dialog thisLayout = new Dialog(this);
+    	thisLayout.setContentView(R.layout.activity_flash_buddy_exec_study_deck);
+
+        dlgAlert.setPositiveButton("Continue", new DialogInterface.OnClickListener() 
+        {
+                public void onClick(DialogInterface dialog, int which) 
+                {
+                	dialog.dismiss();
+                }
+        });
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -409,8 +436,8 @@ public class FlashBuddyExecStudyDeck extends Activity {
 	 */
 	public void onClickDoneStudying( View view ){
 		// Create a new intent 
-		Intent intent = getIntent();
-		String username = intent.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
 		
 		Intent returnUserIntent = new Intent( this, FlashBuddyUserActivity.class );
 		returnUserIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );

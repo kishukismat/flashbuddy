@@ -72,5 +72,15 @@
         android:onClick="onClickEditDeck"
         android:text="@string/edit_deck_button"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/currentSelection2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ModifyFileList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black" />
     
 </RelativeLayout>

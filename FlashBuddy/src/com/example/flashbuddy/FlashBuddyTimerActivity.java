@@ -59,11 +59,8 @@ public class FlashBuddyTimerActivity extends Activity {
 	}
 	
 	//Set the attributes for the session timer.
-	public void setTotalTimer(int theMinTime, int theSecTime){
-		this.theMinutes = theMinTime;
-		this.theSeconds = theSecTime;
-		int minToSec = theMinTime * 60;
-		totalSec = minToSec+theSeconds;
+	public void setTotalTimer(int totalSec){
+		FlashBuddyTimerActivity.totalSec = totalSec;
 	}
 	
 	//When the Save button is clicked the values of the text boxes should be saved as the timer.
@@ -87,10 +84,17 @@ public class FlashBuddyTimerActivity extends Activity {
 		int localTimerMin = Integer.parseInt(timerTextView1.getText().toString());
 		int localTimerSec = Integer.parseInt(timerTextView2.getText().toString());
 
-		this.setTotalTimer(localTimerMin, localTimerSec);
+		int theTime = (localTimerMin * 60) + localTimerSec;
+		
+		this.setTotalTimer(theTime);
 		
 		//Return to user activity screen.
 		Intent returnUserIntent = new Intent( this, FlashBuddyStudyDecksActivity.class );
+		
+		Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		returnUserIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		
     	startActivity(returnUserIntent);
 		
 	}

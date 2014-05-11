@@ -125,6 +125,11 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 						Button studyButton = (Button)findViewById(R.id.StudyDeck);
 						studyButton.setBackgroundColor(Color.parseColor("#4FA044"));
 						
+						TextView selectedDeck = (TextView) findViewById(R.id.currentSelection);
+						String cleanName = FileName.replaceAll("_"," ");
+						cleanName = cleanName.replaceAll(".xml","");
+						selectedDeck.setText(cleanName);
+						
 						return true;
 					}
 				});
@@ -215,6 +220,11 @@ public class FlashBuddyStudyDecksActivity extends Activity {
     // Handles the Timer button click
     public void onClickTimer(View view){
     	Intent showTimerIntent = new Intent (this, FlashBuddyTimerActivity.class);
+    	
+    	Intent carryUsername = getIntent();
+		String username = carryUsername.getStringExtra(FlashBuddy.USERNAME_MESSAGE);
+		showTimerIntent.putExtra( FlashBuddy.USERNAME_MESSAGE, username );
+		
     	startActivity(showTimerIntent);
     }
 	
