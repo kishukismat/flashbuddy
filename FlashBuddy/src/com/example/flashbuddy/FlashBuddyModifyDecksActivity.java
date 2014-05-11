@@ -92,6 +92,7 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 						selectedFile = index;
 						
 						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
+						FileName = FileName + ".xml";
 																		
 						ExpandList.collapseGroup(0);
 						
@@ -127,7 +128,7 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		
 		/* Add the Group */
 		ExpandListGroup gru1 = new ExpandListGroup();
-		gru1.setName( "Decks");
+		gru1.setName( "       Decks");
 		
 		/* 
 		 * Add the children
@@ -141,7 +142,10 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		}else{
 			for( String s : files ){
 				ExpandListChild ch1 = new ExpandListChild();
-				ch1.setName(s);
+				String noXMLString = s.replaceAll(".xml","");
+				noXMLString = noXMLString.replaceAll("_", " ");
+				ch1.setName(noXMLString);
+				//ch1.setName(s);
 				ch1.setTag(null);
 				ch1.setSelected(false);
 				list2.add(ch1);
@@ -268,6 +272,7 @@ public class FlashBuddyModifyDecksActivity extends Activity {
 		 * deletes the target file name
 		 * TODO: insert a dialog box to confirm the deletion
 		 */
+		
 		deleteFile(this.FileName);
 		
 		/** 

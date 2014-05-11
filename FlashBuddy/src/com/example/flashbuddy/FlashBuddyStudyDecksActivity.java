@@ -112,6 +112,9 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 						//String XMLFileName = NoXMLFileName + ".xml";
 						//FileName = XMLFileName;
 						FileName = ExpListItems.get(groupPosition).getItems().get(childPosition).getName();
+						FileName = FileName.replaceAll(" ", "_");
+						FileName = FileName + ".xml";
+						
 						
 						Log.i(TAG,"Filename is: "+FileName);
 						Log.i(TAG,"Group is:"+Integer.toString(Group));
@@ -150,8 +153,8 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		ExpandListGroup gru2 = new ExpandListGroup();
 		
 		/* Add the group parents */
-		gru1.setName( "Built-In Decks");
-		gru2.setName( "User Decks");
+		gru1.setName( "       Built-In Decks");
+		gru2.setName( "       User Decks");
 		
 		/* 
 		 * Add the children
@@ -165,10 +168,10 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		}else{
 			for( String s : builtinFiles ){
 				ExpandListChild ch1 = new ExpandListChild();
-				//String XMLString = ch1.getName();
-				//String noXMLString = XMLString.replaceAll(".xml","");
-				//ch1.setName(noXMLString);
-				ch1.setName(s);
+				String noXMLString = s.replaceAll(".xml","");
+				noXMLString = noXMLString.replaceAll("_", " ");
+				ch1.setName(noXMLString);
+				//ch1.setName(s);
 				ch1.setTag(null);
 				ch1.setSelected(false);
 				list2.add(ch1);
@@ -188,7 +191,9 @@ public class FlashBuddyStudyDecksActivity extends Activity {
 		}else{
 			for( String s : userFiles ){
 				ExpandListChild ch2 = new ExpandListChild();
-				ch2.setName(s);
+				String noXMLString = s.replaceAll(".xml","");
+				noXMLString = noXMLString.replaceAll("_", " ");
+				ch2.setName(noXMLString);
 				ch2.setTag(null);
 				ch2.setSelected(false);
 				list3.add(ch2);
