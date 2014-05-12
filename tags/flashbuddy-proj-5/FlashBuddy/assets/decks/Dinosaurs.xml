@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>39</numcards>
+<title>Dinosaurs</title>
+<subject>Science</subject>
+<card>
+<id>1</id>
+<name>Question #1</name>
+<timer>10</timer>
+<question>The word 'dinosaur' means what?</question>
+<answer>Terrible Lizard</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question #2</name>
+<timer>10</timer>
+<question>In which periods were dinosaurs around?</question>
+<answer>Triassic, Jurassic, and Cretaceous</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question #3</name>
+<timer>10</timer>
+<question>The Era from 260 million years ago to 65 million years ago is known as what?</question>
+<answer>Mesazoic Era</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question #4</name>
+<timer>10</timer>
+<question>Name two events that might have led to the extinction of the dinosaurs.</question>
+<answer>A massive asteroid impact or huge volcanic activity</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question #5</name>
+<timer>10</timer>
+<question>What is the name of a person who studies dinosaurs?</question>
+<answer>Paleontologist</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question #6</name>
+<timer>10</timer>
+<question>The first dinosaur to be formally named is what?</question>
+<answer>Megalosaurus</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question #7</name>
+<timer>10</timer>
+<question>A meat-eating dinosaur is known as what?</question>
+<answer>Carnivore</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question #8</name>
+<timer>10</timer>
+<question>A plant-eating dinosaur is known as what?</question>
+<answer>Herbivore</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question #9</name>
+<timer>10</timer>
+<question>Was the Tyrannosaurus Rex a carnivore or a herbivore?</question>
+<answer>Carnivore</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question #10</name>
+<timer>10</timer>
+<question>Was the Triceratops a carnivore or a herbivore?</question>
+<answer>Herbivore</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question #11</name>
+<timer>10</timer>
+<question>Was the Brachiosaurus a carnivore or a herbivore?</question>
+<answer>Herbivore</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question #12</name>
+<timer>10</timer>
+<question>Was the Brontosaurus a carnivore or a herbivore?</question>
+<answer>Herbivore</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question #13</name>
+<timer>10</timer>
+<question>Was the Velociraptor a carnivore or a herbivore?</question>
+<answer>Carnivore</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question #14</name>
+<timer>10</timer>
+<question>The Stegosaurus had what type of defense?</question>
+<answer>Spikes on its tail and plates on its back.</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question #15</name>
+<timer>10</timer>
+<question>What type of defense did the Triceratops have?</question>
+<answer>Horns on its head.</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question #16</name>
+<timer>10</timer>
+<question>How many horns did a Triceratops have?</question>
+<answer>3</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question #17</name>
+<timer>10</timer>
+<question>True or False: Pterodactyls were dinosaurs.</question>
+<answer>False</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question #18</name>
+<timer>10</timer>
+<question>Birds are descended from a type of dinosaur known as what?</question>
+<answer>Therapods</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question #19</name>
+<timer>10</timer>
+<question>On which part of today's Earth did the T-Rex live?</question>
+<answer>Western North America</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question #20</name>
+<timer>10</timer>
+<question>How heavy could a T-Rex be?</question>
+<answer>7 tons</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>10</timer>
+<question>How long is a T-Rex skull?</question>
+<answer>5 feet</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question #22</name>
+<timer>10</timer>
+<question>In which period did the T-Rex live?</question>
+<answer>Cretaceous</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question #23</name>
+<timer>10</timer>
+<question>In which period did the Velociraptor live?</question>
+<answer>Cretaceous</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question #24</name>
+<timer>10</timer>
+<question>How tall did were Velociraptors?</question>
+<answer>Around 6.6 feet</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question #25</name>
+<timer>10</timer>
+<question>In which period did the Triceratops live?</question>
+<answer>Cretaceous</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question #26</name>
+<timer>10</timer>
+<question>What was the range of the weight of an adult Triceratops?</question>
+<answer>6 to 12 tons</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question #27</name>
+<timer>10</timer>
+<question>How many teeth did a Triceratops have?</question>
+<answer>Between 400 and 800</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question #28</name>
+<timer>10</timer>
+<question>The Brontosaurus is also known as what?</question>
+<answer>Apatosaurus</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question #29</name>
+<timer>10</timer>
+<question>In which period did the Brontosaurus live?</question>
+<answer>Jurassic</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question #30</name>
+<timer>10</timer>
+<question>What was the Brontosaurus' average weight?</question>
+<answer>23 Tons</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question #31</name>
+<timer>10</timer>
+<question>In which period did the Diplodocus live?</question>
+<answer>Jurassic</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question #32</name>
+<timer>10</timer>
+<question>How many vertebrae were in a Diplodocus' tail?</question>
+<answer>80</answer>
+</card>
+<card>
+<id>33</id>
+<name>Question #33</name>
+<timer>10</timer>
+<question>Name three members of the Sauropod family.</question>
+<answer>Brachiosaurus, Diplodocus, and Brontosaurus</answer>
+</card>
+<card>
+<id>34</id>
+<name>Question #34</name>
+<timer>10</timer>
+<question>How many pounds of plants did a Brachiosaurus eat per day?</question>
+<answer>440 to 880</answer>
+</card>
+<card>
+<id>35</id>
+<name>Question #35</name>
+<timer>10</timer>
+<question>Was the Stegosaurus a herbivore or a carnivore?</question>
+<answer>Herbivore</answer>
+</card>
+<card>
+<id>36</id>
+<name>Question #36</name>
+<timer>10</timer>
+<question>In which period did the Stegosaurus live?</question>
+<answer>Jurassic</answer>
+</card>
+<card>
+<id>37</id>
+<name>Question #37</name>
+<timer>10</timer>
+<question>How many plates were there on the back of a Stegosaurus?</question>
+<answer>17</answer>
+</card>
+<card>
+<id>38</id>
+<name>Question #38</name>
+<timer>10</timer>
+<question>What helps us understand what the dinosaurs were like?</question>
+<answer>Fossils</answer>
+</card>
+<card>
+<id>39</id>
+<name>Question #39</name>
+<timer>10</timer>
+<question>Who came up with the word 'dinosaur'?</question>
+<answer>Richard Owen</answer>
+</card>
+</deck>

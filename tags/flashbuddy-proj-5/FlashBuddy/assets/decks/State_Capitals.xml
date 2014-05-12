@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>50</numcards>
+<title>State Capitals</title>
+<subject>Geography</subject>
+<card>
+<id>1</id>
+<name>Question #1</name>
+<timer>11</timer>
+<question>Alabama</question>
+<answer>Montgomery</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question #2</name>
+<timer>11</timer>
+<question>Alaska</question>
+<answer>Juneau</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question #3</name>
+<timer>11</timer>
+<question>Arizona</question>
+<answer>Phoenix</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question #4</name>
+<timer>11</timer>
+<question>Arkansas</question>
+<answer>Little Rock</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question #5</name>
+<timer>11</timer>
+<question>California</question>
+<answer>Sacramento</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question #6</name>
+<timer>11</timer>
+<question>Colorado</question>
+<answer>Denver</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question #7</name>
+<timer>11</timer>
+<question>Connecticut</question>
+<answer>Hartford</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question #8</name>
+<timer>11</timer>
+<question>Delaware</question>
+<answer>Dover</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question #9</name>
+<timer>11</timer>
+<question>Florida</question>
+<answer>Tallahassee</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question #10</name>
+<timer>11</timer>
+<question>Georgia</question>
+<answer>Atlanta</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question #11</name>
+<timer>11</timer>
+<question>Hawaii</question>
+<answer>Honolulu</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question #12</name>
+<timer>11</timer>
+<question>Idaho</question>
+<answer>Boise</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question #13</name>
+<timer>11</timer>
+<question>Illinois</question>
+<answer>Springfield</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question #14</name>
+<timer>11</timer>
+<question>Indiana</question>
+<answer>Indianapolis</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question #15</name>
+<timer>11</timer>
+<question>Iowa</question>
+<answer>Des Moines</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question #16</name>
+<timer>11</timer>
+<question>Kansas</question>
+<answer>Topeka</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question #17</name>
+<timer>11</timer>
+<question>Kentucky</question>
+<answer>Frankfurt</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question #18</name>
+<timer>11</timer>
+<question>Louisiana</question>
+<answer>Baton Rouge</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question #19</name>
+<timer>11</timer>
+<question>Maine</question>
+<answer>Augusta</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question #20</name>
+<timer>11</timer>
+<question>Maryland</question>
+<answer>Annapolis</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>11</timer>
+<question>Massachusetts</question>
+<answer>Boston</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question #22</name>
+<timer>11</timer>
+<question>Michigan</question>
+<answer>Lansing</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question #23</name>
+<timer>11</timer>
+<question>Minnesota</question>
+<answer>St. Paul</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question #24</name>
+<timer>11</timer>
+<question>Mississippi</question>
+<answer>Jackson</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question #25</name>
+<timer>11</timer>
+<question>Missouri</question>
+<answer>Jefferson City</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question #26</name>
+<timer>11</timer>
+<question>Montana</question>
+<answer>Helena</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question #27</name>
+<timer>11</timer>
+<question>Nebraska</question>
+<answer>Lincoln</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question #28</name>
+<timer>11</timer>
+<question>Nevada</question>
+<answer>Carson City</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question #29</name>
+<timer>11</timer>
+<question>New Hampshire</question>
+<answer>Concord</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question #30</name>
+<timer>11</timer>
+<question>New Jersey</question>
+<answer>Trenton</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question #31</name>
+<timer>11</timer>
+<question>New Mexico</question>
+<answer>Santa Fe</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question #32</name>
+<timer>11</timer>
+<question>New York</question>
+<answer>Albany</answer>
+</card>
+<card>
+<id>33</id>
+<name>Question #33</name>
+<timer>11</timer>
+<question>North Carolina</question>
+<answer>Raleigh</answer>
+</card>
+<card>
+<id>34</id>
+<name>Question #34</name>
+<timer>11</timer>
+<question>North Dakota</question>
+<answer>Bismark</answer>
+</card>
+<card>
+<id>35</id>
+<name>Question #35</name>
+<timer>11</timer>
+<question>Ohio</question>
+<answer>Columbus</answer>
+</card>
+<card>
+<id>36</id>
+<name>Question #36</name>
+<timer>11</timer>
+<question>Oklahoma</question>
+<answer>Oklahoma City</answer>
+</card>
+<card>
+<id>37</id>
+<name>Question #37</name>
+<timer>11</timer>
+<question>Oregon</question>
+<answer>Salem</answer>
+</card>
+<card>
+<id>38</id>
+<name>Question #38</name>
+<timer>11</timer>
+<question>Pennsylvania</question>
+<answer>Harrisburg</answer>
+</card>
+<card>
+<id>39</id>
+<name>Question #39</name>
+<timer>11</timer>
+<question>Rhode Island</question>
+<answer>Providence</answer>
+</card>
+<card>
+<id>40</id>
+<name>Question #40</name>
+<timer>11</timer>
+<question>South Carolina</question>
+<answer>Columbia</answer>
+</card>
+<card>
+<id>41</id>
+<name>Question #41</name>
+<timer>11</timer>
+<question>South Dakota</question>
+<answer>Pierre</answer>
+</card>
+<card>
+<id>42</id>
+<name>Question #42</name>
+<timer>11</timer>
+<question>Tennessee</question>
+<answer>Nashville</answer>
+</card>
+<card>
+<id>43</id>
+<name>Question #43</name>
+<timer>11</timer>
+<question>Texas</question>
+<answer>Austin</answer>
+</card>
+<card>
+<id>44</id>
+<name>Question #44</name>
+<timer>11</timer>
+<question>Utah</question>
+<answer>Salt Lake City</answer>
+</card>
+<card>
+<id>45</id>
+<name>Question #45</name>
+<timer>11</timer>
+<question>Vermont</question>
+<answer>Montpelier</answer>
+</card>
+<card>
+<id>46</id>
+<name>Question #46</name>
+<timer>11</timer>
+<question>Virginia</question>
+<answer>Richmond</answer>
+</card>
+<card>
+<id>47</id>
+<name>Question #47</name>
+<timer>11</timer>
+<question>Washington</question>
+<answer>Olympia</answer>
+</card>
+<card>
+<id>48</id>
+<name>Question #48</name>
+<timer>11</timer>
+<question>West Virginia</question>
+<answer>Charleston</answer>
+</card>
+<card>
+<id>49</id>
+<name>Question #49</name>
+<timer>11</timer>
+<question>Wisconsin</question>
+<answer>Madison</answer>
+</card>
+<card>
+<id>50</id>
+<name>Question #50</name>
+<timer>11</timer>
+<question>WWyoming</question>
+<answer>Cheyenne</answer>
+</card>
+</deck>

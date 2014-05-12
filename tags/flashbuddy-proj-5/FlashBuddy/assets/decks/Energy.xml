@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>50</numcards>
+<title>Energy</title>
+<subject>Science</subject>
+<card>
+<id>1</id>
+<name>Question #1</name>
+<timer>0</timer>
+<question>In what type of chemical reaction is chemical energy released as heat?</question>
+<answer>Exothermic</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question #2</name>
+<timer>0</timer>
+<question>What are the six basic types of chemical reactions?</question>
+<answer>Combustion, Synthesis, Single Displacement, Decomposition, Double Displacement, and Acid-Base</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question #3</name>
+<timer>0</timer>
+<question>Oxygen combines with other substances to create what during combustion?</question>
+<answer>Water and Carbon Dioxide</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question #4</name>
+<timer>0</timer>
+<question>Two simple substances combining to create a more complex substance is known as what?</question>
+<answer>Synthesis</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question #5</name>
+<timer>0</timer>
+<question>When some atoms from one substance are transferred to another it is known as what?</question>
+<answer>Single Displacement</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question #6</name>
+<timer>0</timer>
+<question>A complex substance braking down into simpler substances is what?</question>
+<answer>Decomposition</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question #7</name>
+<timer>0</timer>
+<question>When atoms of one substance are exchanged with those of another it is known as what?</question>
+<answer>Double Displacement</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question #8</name>
+<timer>0</timer>
+<question>Acid-Base is what type of chemical reaction between acids and bases?</question>
+<answer>Double Displacement</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question #9</name>
+<timer>0</timer>
+<question>Electricity was first utilized in which century?</question>
+<answer>19th</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question #10</name>
+<timer>0</timer>
+<question>Static electricity occurs when what jumps from one object to another?</question>
+<answer>Electrons</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question #0</name>
+<timer>0</timer>
+<question>Since electricity must come from another form of energy it is known as what type of energy source?</question>
+<answer>Secondary</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question #12</name>
+<timer>0</timer>
+<question>Energy needs to act through what to be utilized?</question>
+<answer>A conductor</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question #13</name>
+<timer>0</timer>
+<question>Electricity is generated when what in a substance are passed along a conductor?</question>
+<answer>Electrons</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question #14</name>
+<timer>0</timer>
+<question>Name three sources of electricity</question>
+<answer>Water, Wind, and Fossil Fuels</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question #15</name>
+<timer>0</timer>
+<question>The two types of an electrical charge are what?</question>
+<answer>Positive and Negative</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question #16</name>
+<timer>0</timer>
+<question>Which formula, developed by Einstein, is used to calculate the amount of energy?</question>
+<answer>E=mc^2</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question #17</name>
+<timer>0</timer>
+<question>Calories are a form of which type of energy?</question>
+<answer>Chemical</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question #18</name>
+<timer>0</timer>
+<question>True or False: Light and Sound are both types of energy.</question>
+<answer>True</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question #19</name>
+<timer>0</timer>
+<question>A unit of energy is normally measured as what?</question>
+<answer>A Joule</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question #20</name>
+<timer>0</timer>
+<question>Solar energy's source is what?</question>
+<answer>The Sun</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question #21</name>
+<timer>0</timer>
+<question>Power generated from water is known as what?</question>
+<answer>Hydropower</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question #22</name>
+<timer>0</timer>
+<question>An object in motion produces what type of energy?</question>
+<answer>Kinetic</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question #23</name>
+<timer>0</timer>
+<question>To calculate kinetic energy, what must be known of the object?</question>
+<answer>Mass and Speed</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question #24</name>
+<timer>0</timer>
+<question>Kinetic energy occurs in which direction?</question>
+<answer>Any</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question #25</name>
+<timer>0</timer>
+<question>What happens to an object;s kinetic energy if its mass doubles?</question>
+<answer>It doubles</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question #26</name>
+<timer>0</timer>
+<question>What happens to an object's kinetic energy if its mass doubles?</question>
+<answer>It quadrouples</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question #27</name>
+<timer>0</timer>
+<question>True or False: The faster an object moves, the less kinetic energy it has.</question>
+<answer>False</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question #28</name>
+<timer>0</timer>
+<question>How is kinetic energy transferred between objects?</question>
+<answer>Through collisions.</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question #29</name>
+<timer>0</timer>
+<question>What are the two types of kinetic energy?</question>
+<answer>Translational and Rotational</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question #30</name>
+<timer>0</timer>
+<question>Motion through space is which type of kinetic energy?</question>
+<answer>Translational</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question #31</name>
+<timer>0</timer>
+<question>Motion centered on an axis is which type of kinetic energy?</question>
+<answer>Rotational</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question #32</name>
+<timer>0</timer>
+<question>What is the speed of light?</question>
+<answer>300,000 km/s</answer>
+</card>
+<card>
+<id>33</id>
+<name>Question #33</name>
+<timer>0</timer>
+<question>How long does it take light from the Sun to reach Earth?</question>
+<answer>10 minutes</answer>
+</card>
+<card>
+<id>34</id>
+<name>Question #34</name>
+<timer>0</timer>
+<question>True or False: The speed of light changes when traveling through different objects.</question>
+<answer>True</answer>
+</card>
+<card>
+<id>35</id>
+<name>Question #35</name>
+<timer>0</timer>
+<question>Light is which type of energy?</question>
+<answer>Electromagnetic</answer>
+</card>
+<card>
+<id>36</id>
+<name>Question #36</name>
+<timer>0</timer>
+<question>Light is made of what?</question>
+<answer>Photons</answer>
+</card>
+<card>
+<id>37</id>
+<name>Question #37</name>
+<timer>0</timer>
+<question>The intensity of photons is dependent on what?</question>
+<answer>The amount of energy they contain.</answer>
+</card>
+<card>
+<id>38</id>
+<name>Question #38</name>
+<timer>0</timer>
+<question>Different colors are generated by what?</question>
+<answer>Different wavelengths of light.</answer>
+</card>
+<card>
+<id>39</id>
+<name>Question #39</name>
+<timer>0</timer>
+<question>Energy cannot be what?</question>
+<answer>Created or destroyed.</answer>
+</card>
+<card>
+<id>40</id>
+<name>Question #40</name>
+<timer>0</timer>
+<question>What are the three types of potential energy?</question>
+<answer>Gravitational, Elastic, and Chemical</answer>
+</card>
+<card>
+<id>41</id>
+<name>Question #41</name>
+<timer>0</timer>
+<question>An object not resting on the ground has what type of potential energy?</question>
+<answer>Gravitational</answer>
+</card>
+<card>
+<id>42</id>
+<name>Question #42</name>
+<timer>0</timer>
+<question>Gravitational Energy does what the heavier the object and the higher off the ground it is?</question>
+<answer>Increases</answer>
+</card>
+<card>
+<id>43</id>
+<name>Question #43</name>
+<timer>0</timer>
+<question>Which type of potential energy is stored in objects that are stretched or compressed?</question>
+<answer>Elastic</answer>
+</card>
+<card>
+<id>44</id>
+<name>Question #44</name>
+<timer>0</timer>
+<question>Energy stored in fossil fuels is which type of potential energy?</question>
+<answer>Chemical</answer>
+</card>
+<card>
+<id>45</id>
+<name>Question #45</name>
+<timer>0</timer>
+<question>How does an object come to posses potential energy?</question>
+<answer>It must be changed by some force.</answer>
+</card>
+<card>
+<id>46</id>
+<name>Question #46</name>
+<timer>0</timer>
+<question>Sound is measured by what?</question>
+<answer>Pressure and intensity</answer>
+</card>
+<card>
+<id>47</id>
+<name>Question #47</name>
+<timer>0</timer>
+<question>Sound travels how fast?</question>
+<answer>767 miles per hour.</answer>
+</card>
+<card>
+<id>48</id>
+<name>Question #48</name>
+<timer>0</timer>
+<question>The study of sound is known as what?</question>
+<answer>Acoustics</answer>
+</card>
+<card>
+<id>49</id>
+<name>Question #49</name>
+<timer>0</timer>
+<question>Thermal energy relates to what property of an object?</question>
+<answer>Temperature</answer>
+</card>
+<card>
+<id>50</id>
+<name>Question #50</name>
+<timer>0</timer>
+<question>True or False: Head and temperature are not the same.</question>
+<answer>True</answer>
+</card>
+</deck>

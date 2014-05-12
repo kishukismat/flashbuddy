@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FlashBuddyCardInputActivity" >
+
+    <EditText
+        android:id="@+id/cardDesignator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="none"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray" />
+
+    <TextView
+        android:id="@+id/questionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cardDesignator"
+        android:layout_below="@+id/cardDesignator"
+        android:layout_marginTop="20dp"
+        android:text="@string/question_title_text"
+        android:textColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/questionEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionView"
+        android:layout_below="@+id/questionView"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/gray" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/answerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questionEntry"
+        android:layout_below="@+id/questionEntry"
+        android:layout_marginTop="20dp"
+        android:text="@string/answer_title_text"
+        android:textColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/answerEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/answerView"
+        android:layout_below="@+id/answerView"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:id="@+id/timerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/answerEntry"
+        android:layout_below="@+id/answerEntry"
+        android:layout_marginTop="21dp"
+        android:text="Timer(in seconds)"
+        android:textColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/timerEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timerView"
+        android:layout_below="@+id/timerView"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/gray" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/doneButton"
+        android:layout_alignLeft="@+id/doneButton"
+        android:layout_marginBottom="21dp"
+        android:background="@color/bluebutton"
+        android:onClick="onClickNextCard"
+        android:text="@string/next_button_text"
+        android:textColor="@color/gray" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@color/green"
+        android:onClick="onClickWriteCard"
+        android:text="@string/create_deck"
+        android:textColor="@color/gray" />
+
+</RelativeLayout>

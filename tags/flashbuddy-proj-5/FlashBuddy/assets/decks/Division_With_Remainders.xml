@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+<numcards>105</numcards>
+<title>Division between two digit numbers with remainders</title>
+<subject>math</subject>
+<card>
+<id>1</id>
+<name>Question 1</name>
+<timer>11</timer>
+<question>21÷10=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>2</id>
+<name>Question 2</name>
+<timer>11</timer>
+<question>22÷10=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>3</id>
+<name>Question 3</name>
+<timer>11</timer>
+<question>23÷10=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>4</id>
+<name>Question 4</name>
+<timer>11</timer>
+<question>23÷11=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>5</id>
+<name>Question 5</name>
+<timer>11</timer>
+<question>24÷10=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>6</id>
+<name>Question 6</name>
+<timer>11</timer>
+<question>24÷11=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>7</id>
+<name>Question 7</name>
+<timer>11</timer>
+<question>25÷10=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>8</id>
+<name>Question 8</name>
+<timer>11</timer>
+<question>25÷11=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>9</id>
+<name>Question 9</name>
+<timer>11</timer>
+<question>25÷12=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>10</id>
+<name>Question 10</name>
+<timer>11</timer>
+<question>26÷10=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>11</id>
+<name>Question 11</name>
+<timer>11</timer>
+<question>26÷11=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>12</id>
+<name>Question 12</name>
+<timer>11</timer>
+<question>26÷12=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>13</id>
+<name>Question 13</name>
+<timer>11</timer>
+<question>27÷10=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>14</id>
+<name>Question 14</name>
+<timer>11</timer>
+<question>27÷11=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>15</id>
+<name>Question 15</name>
+<timer>11</timer>
+<question>27÷12=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>16</id>
+<name>Question 16</name>
+<timer>11</timer>
+<question>27÷13=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>17</id>
+<name>Question 17</name>
+<timer>11</timer>
+<question>28÷10=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>18</id>
+<name>Question 18</name>
+<timer>11</timer>
+<question>28÷11=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>19</id>
+<name>Question 19</name>
+<timer>11</timer>
+<question>28÷12=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>20</id>
+<name>Question 20</name>
+<timer>11</timer>
+<question>28÷13=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>21</id>
+<name>Question 21</name>
+<timer>11</timer>
+<question>29÷10=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>22</id>
+<name>Question 22</name>
+<timer>11</timer>
+<question>29÷11=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>23</id>
+<name>Question 23</name>
+<timer>11</timer>
+<question>29÷12=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>24</id>
+<name>Question 24</name>
+<timer>11</timer>
+<question>29÷13=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>25</id>
+<name>Question 25</name>
+<timer>11</timer>
+<question>29÷14=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>26</id>
+<name>Question 26</name>
+<timer>11</timer>
+<question>30÷11=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>27</id>
+<name>Question 27</name>
+<timer>11</timer>
+<question>30÷12=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>28</id>
+<name>Question 28</name>
+<timer>11</timer>
+<question>30÷13=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>29</id>
+<name>Question 29</name>
+<timer>11</timer>
+<question>30÷14=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>30</id>
+<name>Question 30</name>
+<timer>11</timer>
+<question>31÷10=?</question>
+<answer>3r1</answer>
+</card>
+<card>
+<id>31</id>
+<name>Question 31</name>
+<timer>11</timer>
+<question>31÷11=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>32</id>
+<name>Question 32</name>
+<timer>11</timer>
+<question>31÷12=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>33</id>
+<name>Question 33</name>
+<timer>11</timer>
+<question>31÷13=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>34</id>
+<name>Question 34</name>
+<timer>11</timer>
+<question>31÷14=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>35</id>
+<name>Question 35</name>
+<timer>11</timer>
+<question>31÷15=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>36</id>
+<name>Question 36</name>
+<timer>11</timer>
+<question>32÷10=?</question>
+<answer>3r2</answer>
+</card>
+<card>
+<id>37</id>
+<name>Question 37</name>
+<timer>11</timer>
+<question>32÷11=?</question>
+<answer>2r10</answer>
+</card>
+<card>
+<id>38</id>
+<name>Question 38</name>
+<timer>11</timer>
+<question>32÷12=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>39</id>
+<name>Question 39</name>
+<timer>11</timer>
+<question>32÷13=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>40</id>
+<name>Question 40</name>
+<timer>11</timer>
+<question>32÷14=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>41</id>
+<name>Question 41</name>
+<timer>11</timer>
+<question>32÷15=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>42</id>
+<name>Question 42</name>
+<timer>11</timer>
+<question>33÷10=?</question>
+<answer>3r3</answer>
+</card>
+<card>
+<id>43</id>
+<name>Question 43</name>
+<timer>11</timer>
+<question>33÷12=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>44</id>
+<name>Question 44</name>
+<timer>11</timer>
+<question>33÷13=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>45</id>
+<name>Question 45</name>
+<timer>11</timer>
+<question>33÷14=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>46</id>
+<name>Question 46</name>
+<timer>11</timer>
+<question>33÷15=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>47</id>
+<name>Question 47</name>
+<timer>11</timer>
+<question>33÷16=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>48</id>
+<name>Question 48</name>
+<timer>11</timer>
+<question>34÷10=?</question>
+<answer>3r4</answer>
+</card>
+<card>
+<id>49</id>
+<name>Question 49</name>
+<timer>11</timer>
+<question>34÷11=?</question>
+<answer>3r1</answer>
+</card>
+<card>
+<id>50</id>
+<name>Question 50</name>
+<timer>11</timer>
+<question>34÷12=?</question>
+<answer>2r10</answer>
+</card>
+<card>
+<id>51</id>
+<name>Question 51</name>
+<timer>11</timer>
+<question>34÷13=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>52</id>
+<name>Question 52</name>
+<timer>11</timer>
+<question>34÷14=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>53</id>
+<name>Question 53</name>
+<timer>11</timer>
+<question>34÷15=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>54</id>
+<name>Question 54</name>
+<timer>11</timer>
+<question>34÷16=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>55</id>
+<name>Question 55</name>
+<timer>11</timer>
+<question>35÷10=?</question>
+<answer>3r5</answer>
+</card>
+<card>
+<id>56</id>
+<name>Question 56</name>
+<timer>11</timer>
+<question>35÷11=?</question>
+<answer>3r2</answer>
+</card>
+<card>
+<id>57</id>
+<name>Question 57</name>
+<timer>11</timer>
+<question>35÷12=?</question>
+<answer>2r11</answer>
+</card>
+<card>
+<id>58</id>
+<name>Question 58</name>
+<timer>11</timer>
+<question>35÷13=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>59</id>
+<name>Question 59</name>
+<timer>11</timer>
+<question>35÷14=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>60</id>
+<name>Question 60</name>
+<timer>11</timer>
+<question>35÷15=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>61</id>
+<name>Question 61</name>
+<timer>11</timer>
+<question>35÷16=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>62</id>
+<name>Question 62</name>
+<timer>11</timer>
+<question>35÷17=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>63</id>
+<name>Question 63</name>
+<timer>11</timer>
+<question>36÷10=?</question>
+<answer>3r6</answer>
+</card>
+<card>
+<id>64</id>
+<name>Question 64</name>
+<timer>11</timer>
+<question>36÷11=?</question>
+<answer>3r3</answer>
+</card>
+<card>
+<id>65</id>
+<name>Question 65</name>
+<timer>11</timer>
+<question>36÷13=?</question>
+<answer>2r10</answer>
+</card>
+<card>
+<id>66</id>
+<name>Question 66</name>
+<timer>11</timer>
+<question>36÷14=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>67</id>
+<name>Question 67</name>
+<timer>11</timer>
+<question>36÷15=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>68</id>
+<name>Question 68</name>
+<timer>11</timer>
+<question>36÷16=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>69</id>
+<name>Question 69</name>
+<timer>11</timer>
+<question>36÷17=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>70</id>
+<name>Question 70</name>
+<timer>11</timer>
+<question>37÷10=?</question>
+<answer>3r7</answer>
+</card>
+<card>
+<id>71</id>
+<name>Question 71</name>
+<timer>11</timer>
+<question>37÷11=?</question>
+<answer>3r4</answer>
+</card>
+<card>
+<id>72</id>
+<name>Question 72</name>
+<timer>11</timer>
+<question>37÷12=?</question>
+<answer>3r1</answer>
+</card>
+<card>
+<id>73</id>
+<name>Question 73</name>
+<timer>11</timer>
+<question>37÷13=?</question>
+<answer>2r11</answer>
+</card>
+<card>
+<id>74</id>
+<name>Question 74</name>
+<timer>11</timer>
+<question>37÷14=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>75</id>
+<name>Question 75</name>
+<timer>11</timer>
+<question>37÷15=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>76</id>
+<name>Question 76</name>
+<timer>11</timer>
+<question>37÷16=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>77</id>
+<name>Question 77</name>
+<timer>11</timer>
+<question>37÷17=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>78</id>
+<name>Question 78</name>
+<timer>11</timer>
+<question>37÷18=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>79</id>
+<name>Question 79</name>
+<timer>11</timer>
+<question>38÷10=?</question>
+<answer>3r8</answer>
+</card>
+<card>
+<id>80</id>
+<name>Question 80</name>
+<timer>11</timer>
+<question>38÷11=?</question>
+<answer>3r5</answer>
+</card>
+<card>
+<id>81</id>
+<name>Question 81</name>
+<timer>11</timer>
+<question>38÷12=?</question>
+<answer>3r2</answer>
+</card>
+<card>
+<id>82</id>
+<name>Question 82</name>
+<timer>11</timer>
+<question>38÷13=?</question>
+<answer>2r12</answer>
+</card>
+<card>
+<id>83</id>
+<name>Question 83</name>
+<timer>11</timer>
+<question>38÷14=?</question>
+<answer>2r10</answer>
+</card>
+<card>
+<id>84</id>
+<name>Question 84</name>
+<timer>11</timer>
+<question>38÷15=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>85</id>
+<name>Question 85</name>
+<timer>11</timer>
+<question>38÷16=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>86</id>
+<name>Question 86</name>
+<timer>11</timer>
+<question>38÷17=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>87</id>
+<name>Question 87</name>
+<timer>11</timer>
+<question>38÷18=?</question>
+<answer>2r2</answer>
+</card>
+<card>
+<id>88</id>
+<name>Question 88</name>
+<timer>11</timer>
+<question>39÷10=?</question>
+<answer>3r9</answer>
+</card>
+<card>
+<id>89</id>
+<name>Question 89</name>
+<timer>11</timer>
+<question>39÷11=?</question>
+<answer>3r6</answer>
+</card>
+<card>
+<id>90</id>
+<name>Question 90</name>
+<timer>11</timer>
+<question>39÷12=?</question>
+<answer>3r3</answer>
+</card>
+<card>
+<id>91</id>
+<name>Question 91</name>
+<timer>11</timer>
+<question>39÷14=?</question>
+<answer>2r11</answer>
+</card>
+<card>
+<id>92</id>
+<name>Question 92</name>
+<timer>11</timer>
+<question>39÷15=?</question>
+<answer>2r9</answer>
+</card>
+<card>
+<id>93</id>
+<name>Question 93</name>
+<timer>11</timer>
+<question>39÷16=?</question>
+<answer>2r7</answer>
+</card>
+<card>
+<id>94</id>
+<name>Question 94</name>
+<timer>11</timer>
+<question>39÷17=?</question>
+<answer>2r5</answer>
+</card>
+<card>
+<id>95</id>
+<name>Question 95</name>
+<timer>11</timer>
+<question>39÷18=?</question>
+<answer>2r3</answer>
+</card>
+<card>
+<id>96</id>
+<name>Question 96</name>
+<timer>11</timer>
+<question>39÷19=?</question>
+<answer>2r1</answer>
+</card>
+<card>
+<id>97</id>
+<name>Question 97</name>
+<timer>11</timer>
+<question>40÷11=?</question>
+<answer>3r7</answer>
+</card>
+<card>
+<id>98</id>
+<name>Question 98</name>
+<timer>11</timer>
+<question>40÷12=?</question>
+<answer>3r4</answer>
+</card>
+<card>
+<id>99</id>
+<name>Question 99</name>
+<timer>11</timer>
+<question>40÷13=?</question>
+<answer>3r1</answer>
+</card>
+<card>
+<id>100</id>
+<name>Question 100</name>
+<timer>11</timer>
+<question>40÷14=?</question>
+<answer>2r12</answer>
+</card>
+<card>
+<id>101</id>
+<name>Question 101</name>
+<timer>11</timer>
+<question>40÷15=?</question>
+<answer>2r10</answer>
+</card>
+<card>
+<id>102</id>
+<name>Question 102</name>
+<timer>11</timer>
+<question>40÷16=?</question>
+<answer>2r8</answer>
+</card>
+<card>
+<id>103</id>
+<name>Question 103</name>
+<timer>11</timer>
+<question>40÷17=?</question>
+<answer>2r6</answer>
+</card>
+<card>
+<id>104</id>
+<name>Question 104</name>
+<timer>11</timer>
+<question>40÷18=?</question>
+<answer>2r4</answer>
+</card>
+<card>
+<id>105</id>
+<name>Question 105</name>
+<timer>11</timer>
+<question>40÷19=?</question>
+<answer>2r2</answer>
+</card>
+</deck>

@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FlashBuddyStudyDecksActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/whiteboard"
+        android:src="@drawable/white_board" />
+
+    <ExpandableListView
+        android:id="@+id/StudyFileList"
+        android:layout_width="280dp"
+        android:layout_height="260dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:cacheColorHint="@color/gray"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:transcriptMode="alwaysScroll" >
+
+    </ExpandableListView>
+
+    <Button
+        android:id="@+id/Timer"
+        style="@drawable/roundedbutton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:background="@color/green"
+        android:onClick="onClickTimer"
+        android:text="@string/TimerText"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/StudyDeck"
+        style="@drawable/roundedbutton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/Timer"
+        android:layout_alignLeft="@+id/Timer"
+        android:layout_marginBottom="14dp"
+        android:background="@color/bluebutton"
+        android:onClick="onClickStudyDeck"
+        android:text="@string/study_deck_button"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/currentSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Black" />
+
+</RelativeLayout>
