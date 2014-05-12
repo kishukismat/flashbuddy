@@ -82,6 +82,9 @@ public class FlashBuddyExecStudyDeck extends Activity {
 		
 		in = this.openDeckFile(FileName, Group);
 		
+		/* 
+		 * read the deck into memory
+		 */
 		try {
 			myDeck.readDeck(in);
 		} catch (XmlPullParserException e) {
@@ -89,6 +92,9 @@ public class FlashBuddyExecStudyDeck extends Activity {
 			e.printStackTrace();
 		}
 			
+		/* 
+		 * close the input stream
+		 */
 		try {
 			in.close();
 		} catch (IOException e) {
