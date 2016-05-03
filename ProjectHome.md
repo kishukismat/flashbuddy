@@ -1,0 +1,1 @@
+Android-based mobile application for elementary aged students to build and use flash cards.  Built as a project for CS5373 at Texas Tech University
